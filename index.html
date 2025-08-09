@@ -7,245 +7,246 @@
     <link href="https://fonts.cdnfonts.com/css/kalpurush" rel="stylesheet">
     
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        /* Print Styles */
-        @media print {
-            body { 
-                margin: 0; 
-                font-size: 9pt; 
-            }
-            .page-break { 
-                page-break-before: always; 
-            }
-            .no-print { 
-                display: none; 
-            }
+    /* Print Styles */
+    @media print {
+        body { 
+            margin: 0; 
+            font-size: 9pt; 
         }
-
-        /* Body Styling */
-        body {
-            font-family: 'Kalpurush', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.4;
-            margin: 20px;
-            background-color: #f8f9fa;
-            color: #333;
+        .page-break { 
+            page-break-before: always; 
         }
-
-        /* Container Styling */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .no-print { 
+            display: none; 
         }
+    }
 
-        /* Header Styling */
-        .header {
-            text-align: center;
-            border-bottom: 3px solid #2c5aa0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
+    /* Body Styling */
+    body {
+        font-family: 'Kalpurush', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.4;
+        margin: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+    }
 
-        .header h1 {
-            color: #2c5aa0;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
+    /* Container Styling */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-        .header .subtitle {
-            color: #666;
-            font-size: 1.1em;
-            font-style: italic;
-        }
+    /* Header Styling */
+    .header {
+        text-align: center;
+        border-bottom: 3px solid #2c5aa0;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
 
-        /* Search Bar Styling */
-        .search-bar {
-            margin-bottom: 20px;
-            text-align: center;
+    .header h1 {
+        color: #2c5aa0;
+        font-size: 2.2em;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .header .subtitle {
+        color: #666;
+        font-size: 1.1em;
+        font-style: italic;
+    }
+
+    /* Search Bar Styling */
+    .search-bar {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .search-bar input {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        font-family: 'Kalpurush', sans-serif;
+        font-size: 1em;
+    }
+
+    /* Section Styling */
+    .section {
+        margin-bottom: 40px;
+    }
+
+    .section-header {
+        background: linear-gradient(135deg, #2c5aa0, #1e3d72);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Term Grid Styling */
+    .term-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* Term Card Styling */
+    .term-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 15px;
+        background: #fafafa;
+        transition: transform 0.2s ease;
+    }
+
+    .term-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .term-name {
+        font-weight: bold;
+        color: #2c5aa0;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .pronunciation {
+        color: #666;
+        font-style: italic;
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+
+    .meaning {
+        color: #333;
+        margin-bottom: 8px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .simple-meaning {
+        flex: 1;
+        font-weight: 500;
+    }
+
+    .bengali-meaning {
+        flex: 1;
+        color: #0066cc;
+        border-left: 2px solid #e0e0e0;
+        padding-left: 10px;
+    }
+
+    .example {
+        color: #555;
+        font-style: italic;
+        font-size: 0.95em;
+        background: #f0f7ff;
+        padding: 8px;
+        border-radius: 4px;
+        border-left: 3px solid #2c5aa0;
+    }
+
+    /* Table of Contents Styling */
+    .toc {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        border-left: 4px solid #2c5aa0;
+    }
+
+    .toc h2 {
+        color: #2c5aa0;
+        margin-bottom: 15px;
+    }
+
+    .toc-item {
+        padding: 5px 0;
+        border-bottom: 1px dotted #ddd;
+    }
+
+    .toc-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Stats Box Styling */
+    .stats-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    /* Print Button Styling */
+    .print-btn {
+        background: #2c5aa0;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-bottom: 20px;
+        transition: background 0.3s ease;
+    }
+
+    .print-btn:hover {
+        background: #1e3d72;
+    }
+
+    /* Footer Styling */
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid #e0e0e0;
+        color: #666;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .term-grid {
+            grid-template-columns: 1fr;
         }
 
         .search-bar input {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            font-family: 'Kalpurush', sans-serif;
-            font-size: 1em;
+            width: 100%;
         }
+    }
+</style>
 
-        /* Section Styling */
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section-header {
-            background: linear-gradient(135deg, #2c5aa0, #1e3d72);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* Term Grid Styling */
-        .term-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        /* Term Card Styling */
-        .term-card {
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 15px;
-            background: #fafafa;
-            transition: transform 0.2s ease;
-        }
-
-        .term-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .term-name {
-            font-weight: bold;
-            color: #2c5aa0;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .pronunciation {
-            color: #666;
-            font-style: italic;
-            font-size: 0.9em;
-            margin-bottom: 8px;
-        }
-
-        .meaning {
-            color: #333;
-            margin-bottom: 8px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .simple-meaning {
-            flex: 1;
-            font-weight: 500;
-        }
-
-        .bengali-meaning {
-            flex: 1;
-            color: #0066cc;
-            border-left: 2px solid #e0e0e0;
-            padding-left: 10px;
-        }
-
-        .example {
-            color: #555;
-            font-style: italic;
-            font-size: 0.95em;
-            background: #f0f7ff;
-            padding: 8px;
-            border-radius: 4px;
-            border-left: 3px solid #2c5aa0;
-        }
-
-        /* Table of Contents Styling */
-        .toc {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 4px solid #2c5aa0;
-        }
-
-        .toc h2 {
-            color: #2c5aa0;
-            margin-bottom: 15px;
-        }
-
-        .toc-item {
-            padding: 5px 0;
-            border-bottom: 1px dotted #ddd;
-        }
-
-        .toc-item:last-child {
-            border-bottom: none;
-        }
-
-        /* Stats Box Styling */
-        .stats-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        /* Print Button Styling */
-        .print-btn {
-            background: #2c5aa0;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-bottom: 20px;
-            transition: background 0.3s ease;
-        }
-
-        .print-btn:hover {
-            background: #1e3d72;
-        }
-
-        /* Footer Styling */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-            color: #666;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .term-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .search-bar input {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -253,1654 +254,1655 @@
             <h1>জার্নালিজ শব্দভান্ডার</h1>
             <div class="subtitle">ইংরেজি পত্রিকায় ব্যবহৃত শীর্ষ ২০০ শব্দের সম্পূর্ণ তালিকা</div>
         </div>
-
+        
         <!-- Search Bar -->
-        <div class="search-bar no-print">
-            <input type="text" id="searchInput" placeholder="শব্দ অনুসন্ধান করুন..." onkeyup="searchTerms()">
+    <div class="search-bar no-print">
+        <input type="text" id="searchInput" placeholder="শব্দ অনুসন্ধান করুন..." onkeyup="searchTerms()">
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc no-print">
+        <h2>বিষয়বস্তুর তালিকা</h2>
+        <div class="toc-item"><a href="#conflict">দ্বন্দ্ব, সমালোচনা ও রাজনৈতিক সংঘাত (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#agreements">চুক্তি, আলোচনা ও সিদ্ধান্ত (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#economics">অর্থনীতি, ব্যবসা ও অর্থ (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#crime">অপরাধ, আইন ও তদন্ত (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#events">ঘটনা, প্রভাব ও প্রতিক্রিয়া (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#rise">উত্থান, পতন ও পরিবর্তন (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#future">ভবিষ্যৎ সম্ভাবনা ও পরিকল্পনা (২০ শব্দ)</a></div>
+        <div class="toc-item"><a href="#miscellaneous">বিবিধ গুরুত্বপূর্ণ শব্দ (৩০ শব্দ)</a></div>
+    </div>
+
+    <!-- Stats Box 
+    <div class="stats-box no-print">
+        <div class="stat-card">
+            <div class="stat-number">200</div>
+            <div>মোট শব্দ</div>
         </div>
-
-        <!-- Table of Contents -->
-        <div class="toc no-print">
-            <h2>বিষয়বস্তুর তালিকা</h2>
-            <div class="toc-item"><a href="#conflict">দ্বন্দ্ব, সমালোচনা ও রাজনৈতিক সংঘাত (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#agreements">চুক্তি, আলোচনা ও সিদ্ধান্ত (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#economics">অর্থনীতি, ব্যবসা ও অর্থ (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#crime">অপরাধ, আইন ও তদন্ত (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#events">ঘটনা, প্রভাব ও প্রতিক্রিয়া (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#rise">উত্থান, পতন ও পরিবর্তন (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#future">ভবিষ্যৎ সম্ভাবনা ও পরিকল্পনা (২০ শব্দ)</a></div>
-            <div class="toc-item"><a href="#miscellaneous">বিবিধ গুরুত্বপূর্ণ শব্দ (৩০ শব্দ)</a></div>
+        <div class="stat-card">
+            <div class="stat-number">8</div>
+            <div>বিভাগ</div>
         </div>
-
-        <!-- Stats Box 
-        <div class="stats-box no-print">
-            <div class="stat-card">
-                <div class="stat-number">200</div>
-                <div>মোট শব্দ</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">8</div>
-                <div>বিভাগ</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">2025</div>
-                <div>সংকলন বছর</div>
-            </div>
-        </div> -->
-
-        <!-- Print Button -->
-        <button class="print-btn no-print" onclick="window.print()">প্রিন্ট করুন</button>
-
-        <!-- Conflict, Criticism & Political Clashes -->
-        <div class="section" id="conflict">
-            <div class="section-header">দ্বন্দ্ব, সমালোচনা ও রাজনৈতিক সংঘাত (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Slam</div>
-                    <div class="pronunciation">/slæm/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Criticize harshly</div>
-                        <div class="bengali-meaning">তীব্র সমালোচনা করা</div>
-                    </div>
-                    <div class="example">Opposition slams government's new economic policy.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Lash out</div>
-                    <div class="pronunciation">/læʃ aʊt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Attack verbally</div>
-                        <div class="bengali-meaning">কথার মাধ্যমে আক্রমণ করা</div>
-                    </div>
-                    <div class="example">The minister lashed out at the media for "false reporting".</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Lambaste</div>
-                    <div class="pronunciation">/læmˈbeɪst/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Criticize severely</div>
-                        <div class="bengali-meaning">কঠোর তিরস্কার করা</div>
-                    </div>
-                    <div class="example">He lambasted the committee for its inaction.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Row</div>
-                    <div class="pronunciation">/raʊ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A serious argument</div>
-                        <div class="bengali-meaning">তীব্র বাদানুবাদ/ঝগড়া</div>
-                    </div>
-                    <div class="example">A major row has erupted over the selection process.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Spat</div>
-                    <div class="pronunciation">/spæt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A minor argument</div>
-                        <div class="bengali-meaning">ছোটখাটো ঝগড়া/তর্ক</div>
-                    </div>
-                    <div class="example">The two leaders had a brief spat during the debate.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Feud</div>
-                    <div class="pronunciation">/fjuːd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A long, bitter quarrel</div>
-                        <div class="bengali-meaning">দীর্ঘদিনের বিবাদ</div>
-                    </div>
-                    <div class="example">The political feud between the two families is well-known.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Rift</div>
-                    <div class="pronunciation">/rɪft/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A serious crack in a relationship</div>
-                        <div class="bengali-meaning">সম্পর্কচ্ছেদ/ফাটল</div>
-                    </div>
-                    <div class="example">A rift has appeared within the ruling party.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Face-off</div>
-                    <div class="pronunciation">/ˈfeɪs ɒf/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A direct confrontation</div>
-                        <div class="bengali-meaning">সরাসরি মোকাবিলা</div>
-                    </div>
-                    <div class="example">A diplomatic face-off is brewing between the two countries.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Standoff</div>
-                    <div class="pronunciation">/ˈstændɒf/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A deadlock or stalemate</div>
-                        <div class="bengali-meaning">অচলবস্থা</div>
-                    </div>
-                    <div class="example">The border standoff continued for a third day.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Deadlock</div>
-                    <div class="pronunciation">/ˈdedlɒk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A situation where no progress can be made</div>
-                        <div class="bengali-meaning">অচলবস্থা/অচলাবস্থা</div>
-                    </div>
-                    <div class="example">Talks between the union and management have reached a deadlock.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Lock horns</div>
-                    <div class="pronunciation">/lɒk hɔːrnz/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To get into an argument</div>
-                        <div class="bengali-meaning">বিতর্কে জড়ানো</div>
-                    </div>
-                    <div class="example">The two giants of tech are set to lock horns in court.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Rebuff</div>
-                    <div class="pronunciation">/rɪˈbʌf/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To reject bluntly</div>
-                        <div class="bengali-meaning">সরাসরি প্রত্যাখ্যান করা</div>
-                    </div>
-                    <div class="example">His plea for help was rebuffed.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Snub</div>
-                    <div class="pronunciation">/snʌb/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To ignore or insult</div>
-                        <div class="bengali-meaning">উপেক্ষা বা অপমান করা</div>
-                    </div>
-                    <div class="example">The visiting diplomat snubbed the official ceremony.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Decry</div>
-                    <div class="pronunciation">/dɪˈkraɪ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To publicly denounce</div>
-                        <div class="bengali-meaning">প্রকাশ্যে নিন্দা করা</div>
-                    </div>
-                    <div class="example">Activists decry the lack of environmental protection.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Gherao</div>
-                    <div class="pronunciation">/ɡɪˈraʊ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To surround a person or place as a protest</div>
-                        <div class="bengali-meaning">ঘেরাও করা</div>
-                    </div>
-                    <div class="example">Protesters decided to gherao the administrative building.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Boycott</div>
-                    <div class="pronunciation">/ˈbɔɪkɒt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To refuse to participate in something as a protest</div>
-                        <div class="bengali-meaning">বর্জন করা</div>
-                    </div>
-                    <div class="example">The opposition party announced a boycott of the election.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Hassle</div>
-                    <div class="pronunciation">/ˈhæsəl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To annoy or bother persistently</div>
-                        <div class="bengali-meaning">হয়রানি করা</div>
-                    </div>
-                    <div class="example">Commuters face daily hassle on the city's roads.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Manhandle</div>
-                    <div class="pronunciation">/ˈmænhændl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To handle roughly</div>
-                        <div class="bengali-meaning">শারীরিকভাবে হেনস্তা করা</div>
-                    </div>
-                    <div class="example">The journalist was allegedly manhandled by security.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Heckle</div>
-                    <div class="pronunciation">/ˈhekəl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To interrupt a speaker with aggressive comments</div>
-                        <div class="bengali-meaning">বিদ্রূপ বা প্রশ্ন করে বাধা দেওয়া</div>
-                    </div>
-                    <div class="example">The minister was heckled during his speech.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Oust</div>
-                    <div class="pronunciation">/aʊst/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To remove from power</div>
-                        <div class="bengali-meaning">ক্ষমতা থেকে অপসারণ করা</div>
-                    </div>
-                    <div class="example">The rebel faction attempted to oust the party leader.</div>
-                </div>
-            </div>
+        <div class="stat-card">
+            <div class="stat-number">2025</div>
+            <div>সংকলন বছর</div>
         </div>
+    </div> -->
 
-        <!-- Agreements, Discussions & Decisions -->
-        <div class="section" id="agreements">
-            <div class="section-header">চুক্তি, আলোচনা ও সিদ্ধান্ত (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Ink</div>
-                    <div class="pronunciation">/ɪŋk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To sign (a deal)</div>
-                        <div class="bengali-meaning">চুক্তি স্বাক্ষর করা</div>
-                    </div>
-                    <div class="example">Bangladesh inks a major trade deal with Vietnam.</div>
+    <!-- Print Button -->
+    <button class="print-btn no-print" onclick="window.print()">প্রিন্ট করুন</button>
+
+    <!-- Conflict, Criticism & Political Clashes -->
+    <div class="section" id="conflict">
+        <div class="section-header">দ্বন্দ্ব, সমালোচনা ও রাজনৈতিক সংঘাত (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Slam</div>
+                <div class="pronunciation">/slæm/ (স্ল্যাম)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Criticize harshly</div>
+                    <div class="bengali-meaning">তীব্র সমালোচনা করা</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Pact</div>
-                    <div class="pronunciation">/pækt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An agreement</div>
-                        <div class="bengali-meaning">চুক্তি/সন্ধি</div>
-                    </div>
-                    <div class="example">The two nations signed a historic peace pact.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Accord</div>
-                    <div class="pronunciation">/əˈkɔːrd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An official agreement</div>
-                        <div class="bengali-meaning">আনুষ্ঠানিক চুক্তি</div>
-                    </div>
-                    <div class="example">A peace accord was reached after weeks of negotiation.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Mull</div>
-                    <div class="pronunciation">/mʌl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To consider</div>
-                        <div class="bengali-meaning">গভীরভাবে বিবেচনা করা</div>
-                    </div>
-                    <div class="example">The government mulls a new strategy to fight inflation.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Weigh</div>
-                    <div class="pronunciation">/weɪ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To consider options</div>
-                        <div class="bengali-meaning">বিকল্প বিবেচনা করা</div>
-                    </div>
-                    <div class="example">The committee is weighing several proposals.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Vow</div>
-                    <div class="pronunciation">/vaʊ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To promise solemnly</div>
-                        <div class="bengali-meaning">শপথ করা/প্রতিজ্ঞা করা</div>
-                    </div>
-                    <div class="example">The new mayor vowed to create a greener city.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Pledge</div>
-                    <div class="pronunciation">/pledʒ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To promise formally</div>
-                        <div class="bengali-meaning">প্রতিশ্রুতি দেওয়া</div>
-                    </div>
-                    <div class="example">The company pledged $1 million to the relief fund.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Assert</div>
-                    <div class="pronunciation">/əˈsɜːrt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To state confidently</div>
-                        <div class="bengali-meaning">জোর দিয়ে বলা</div>
-                    </div>
-                    <div class="example">He asserted that the country's economy is on the right track.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Reiterate</div>
-                    <div class="pronunciation">/riˈɪtəreɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To say again for emphasis</div>
-                        <div class="bengali-meaning">পুনরাবৃত্তি করা</div>
-                    </div>
-                    <div class="example">The Prime Minister reiterated her commitment to development.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Scrap</div>
-                    <div class="pronunciation">/skræp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To cancel</div>
-                        <div class="bengali-meaning">বাতিল করা</div>
-                    </div>
-                    <div class="example">The plan for a new highway has been scrapped.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Axe</div>
-                    <div class="pronunciation">/æks/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To cut or remove</div>
-                        <div class="bengali-meaning">ছেঁটে ফেলা/বাদ দেওয়া</div>
-                    </div>
-                    <div class="example">Several projects were axed due to budget cuts.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Shelve</div>
-                    <div class="pronunciation">/ʃelv/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To postpone a plan</div>
-                        <div class="bengali-meaning">পরিকল্পনা স্থগিত রাখা</div>
-                    </div>
-                    <div class="example">The proposal was shelved indefinitely.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Greenlight</div>
-                    <div class="pronunciation">/ˈɡriːnlaɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To give permission to proceed</div>
-                        <div class="bengali-meaning">সবুজ সংকেত দেওয়া</div>
-                    </div>
-                    <div class="example">The city corporation greenlighted the construction of the flyover.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Nod</div>
-                    <div class="pronunciation">/nɒd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Approval</div>
-                        <div class="bengali-meaning">অনুমোদন/সম্মতি</div>
-                    </div>
-                    <div class="example">The project finally got the nod from the ministry.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Consensus</div>
-                    <div class="pronunciation">/kənˈsensəs/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">General agreement</div>
-                        <div class="bengali-meaning">সর্বসম্মতি/ঐকমত্য</div>
-                    </div>
-                    <div class="example">The committee reached a consensus on the issue.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Parley</div>
-                    <div class="pronunciation">/ˈpɑːrli/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A discussion between enemies/opponents</div>
-                        <div class="bengali-meaning">আলোচনা (শত্রুপক্ষের মধ্যে)</div>
-                    </div>
-                    <div class="example">The rival groups held a secret parley.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Huddle</div>
-                    <div class="pronunciation">/ˈhʌdl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To gather closely to discuss something</div>
-                        <div class="bengali-meaning">একত্রে জটলা করে আলোচনা করা</div>
-                    </div>
-                    <div class="example">The ministers went into a huddle before the press conference.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Broach</div>
-                    <div class="pronunciation">/broʊtʃ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To bring up a sensitive topic for discussion</div>
-                        <div class="bengali-meaning">আলোচনার জন্য (কঠিন) বিষয় উত্থাপন করা</div>
-                    </div>
-                    <div class="example">He broached the subject of his resignation.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Slate</div>
-                    <div class="pronunciation">/sleɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To schedule</div>
-                        <div class="bengali-meaning">সময়সূচী নির্ধারণ করা</div>
-                    </div>
-                    <div class="example">The meeting is slated for next Tuesday.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Earmark</div>
-                    <div class="pronunciation">/ˈɪərmɑːrk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To set aside for a particular purpose</div>
-                        <div class="bengali-meaning">নির্দিষ্ট কাজের জন্য বরাদ্দ করা</div>
-                    </div>
-                    <div class="example">The funds were earmarked for rural development.</div>
-                </div>
+                <div class="example">Opposition slams government's new economic policy.</div>
             </div>
-        </div>
-
-        <!-- Economics, Business & Finance -->
-        <div class="section" id="economics">
-            <div class="section-header">অর্থনীতি, ব্যবসা ও অর্থ (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Hike</div>
-                    <div class="pronunciation">/haɪk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A sharp increase (in price/rate)</div>
-                        <div class="bengali-meaning">আকস্মিক বৃদ্ধি (দাম/হার)</div>
-                    </div>
-                    <div class="example">A massive fuel price hike has been announced.</div>
+            <div class="term-card">
+                <div class="term-name">Lash out</div>
+                <div class="pronunciation">/læʃ aʊt/ (ল্যাশ আউট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Attack verbally</div>
+                    <div class="bengali-meaning">কথার মাধ্যমে আক্রমণ করা</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Slash</div>
-                    <div class="pronunciation">/slæʃ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To reduce sharply</div>
-                        <div class="bengali-meaning">резко কমানো</div>
-                    </div>
-                    <div class="example">The company decided to slash 500 jobs.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Dip</div>
-                    <div class="pronunciation">/dɪp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A slight, temporary fall</div>
-                        <div class="bengali-meaning">সামান্য পতন</div>
-                    </div>
-                    <div class="example">There was a slight dip in share prices this morning.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Curb</div>
-                    <div class="pronunciation">/kɜːrb/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To control or limit</div>
-                        <div class="bengali-meaning">নিয়ন্ত্রণ বা দমন করা</div>
-                    </div>
-                    <div class="example">The central bank is trying to curb inflation.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Woo</div>
-                    <div class="pronunciation">/wuː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To try to attract</div>
-                        <div class="bengali-meaning">আকর্ষণ করার চেষ্টা করা</div>
-                    </div>
-                    <div class="example">The government is trying to woo foreign investors.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Bolster / Boost</div>
-                    <div class="pronunciation">/ˈbəʊlstər, buːst/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To support or strengthen</div>
-                        <div class="bengali-meaning">শক্তিশালী করা/বৃদ্ধি করা</div>
-                    </div>
-                    <div class="example">The new credit line will bolster the country's foreign reserves.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Post</div>
-                    <div class="pronunciation">/poʊst/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To announce or achieve (a profit/loss)</div>
-                        <div class="bengali-meaning">অর্জন করা (লাভ/লোকসান)</div>
-                    </div>
-                    <div class="example">The company posted record profits in the last quarter.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Rake in</div>
-                    <div class="pronunciation">/reɪk ɪn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To earn a lot of money easily</div>
-                        <div class="bengali-meaning">প্রচুর অর্থ উপার্জন করা</div>
-                    </div>
-                    <div class="example">The film raked in millions on its opening weekend.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Bailout</div>
-                    <div class="pronunciation">/ˈbeɪlaʊt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Financial rescue</div>
-                        <div class="bengali-meaning">আর্থিক সংকট থেকে উদ্ধার</div>
-                    </div>
-                    <div class="example">The government announced a bailout package for the struggling airline.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Austerity</div>
-                    <div class="pronunciation">/ɔːˈsterəti/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Measures to reduce government spending</div>
-                        <div class="bengali-meaning">ব্যয়সংকোচন নীতি</div>
-                    </div>
-                    <div class="example">The country is going through a period of austerity.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Fiscal</div>
-                    <div class="pronunciation">/ˈfɪskəl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Related to government revenue/tax</div>
-                        <div class="bengali-meaning">রাজস্ব-সংক্রান্ত</div>
-                    </div>
-                    <div class="example">The fiscal year begins in July.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Monetary</div>
-                    <div class="pronunciation">/ˈmɒnɪtəri/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Related to money supply/currency</div>
-                        <div class="bengali-meaning">মুদ্রা-সংক্রান্ত</div>
-                    </div>
-                    <div class="example">The central bank is responsible for monetary policy.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Bullish</div>
-                    <div class="pronunciation">/ˈbʊlɪʃ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Optimistic about the market</div>
-                        <div class="bengali-meaning">বাজার নিয়ে আশাবাদী</div>
-                    </div>
-                    <div class="example">Investors are bullish on the tech sector.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Bearish</div>
-                    <div class="pronunciation">/ˈbeərɪʃ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Pessimistic about the market</div>
-                        <div class="bengali-meaning">বাজার নিয়ে হতাশাবাদী</div>
-                    </div>
-                    <div class="example">The market has a bearish outlook for the next quarter.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Lag</div>
-                    <div class="pronunciation">/læɡ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To fall behind</div>
-                        <div class="bengali-meaning">পিছিয়ে পড়া</div>
-                    </div>
-                    <div class="example">The manufacturing sector continues to lag.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Glut</div>
-                    <div class="pronunciation">/ɡlʌt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An excessive supply</div>
-                        <div class="bengali-meaning">অতিরিক্ত সরবরাহ</div>
-                    </div>
-                    <div class="example">A glut of potatoes has caused prices to fall.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Levy</div>
-                    <div class="pronunciation">/ˈlevi/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To impose a tax or fine</div>
-                        <div class="bengali-meaning">কর বা জরিমানা আরোপ করা</div>
-                    </div>
-                    <div class="example">A new tax was levied on imported cars.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Portfolio</div>
-                    <div class="pronunciation">/pɔːrtˈfoʊlioʊ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A range of investments</div>
-                        <div class="bengali-meaning">বিনিয়োগের সম্ভার</div>
-                    </div>
-                    <div class="example">He has a diverse investment portfolio.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Ventures</div>
-                    <div class="pronunciation">/ˈventʃərz/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A risky business project</div>
-                        <div class="bengali-meaning">ঝুঁকিপূর্ণ ব্যবসায়িক উদ্যোগ</div>
-                    </div>
-                    <div class="example">He is known for his successful tech ventures.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Stake</div>
-                    <div class="pronunciation">/steɪk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A share or interest in a business</div>
-                        <div class="bengali-meaning">অংশীদারিত্ব/অংশ</div>
-                    </div>
-                    <div class="example">The foreign company bought a 20% stake in the local bank.</div>
-                </div>
+                <div class="example">The minister lashed out at the media for "false reporting".</div>
             </div>
-        </div>
-
-        <!-- Crime, Law & Investigation -->
-        <div class="section" id="crime">
-            <div class="section-header">অপরাধ, আইন ও তদন্ত (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Nab / Net</div>
-                    <div class="pronunciation">/næb, net/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To catch or arrest</div>
-                        <div class="bengali-meaning">গ্রেপ্তার করা/জালে ফেলা</div>
-                    </div>
-                    <div class="example">Police nabbed the main suspect last night.</div>
+            <div class="term-card">
+                <div class="term-name">Lambaste</div>
+                <div class="pronunciation">/læmˈbeɪst/ (ল্যামবেস্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Criticize severely</div>
+                    <div class="bengali-meaning">কঠোর তিরস্কার করা</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Foil</div>
-                    <div class="pronunciation">/fɔɪl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To prevent a crime from succeeding</div>
-                        <div class="bengali-meaning">ব্যর্থ করে দেওয়া</div>
-                    </div>
-                    <div class="example">Security forces foiled a major terror plot.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Raid</div>
-                    <div class="pronunciation">/reɪd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A surprise visit by police</div>
-                        <div class="bengali-meaning">আকস্মিক হানা/অভিযান</div>
-                    </div>
-                    <div class="example">The team conducted a raid on the illegal factory.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Haul</div>
-                    <div class="pronunciation">/hɔːl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A quantity of illegal goods seized</div>
-                        <div class="bengali-meaning">জব্দকৃত অবৈধ মালামাল</div>
-                    </div>
-                    <div class="example">The customs officials made a huge drug haul.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Flee</div>
-                    <div class="pronunciation">/fliː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To run away</div>
-                        <div class="bengali-meaning">পালিয়ে যাওয়া</div>
-                    </div>
-                    <div class="example">The suspect fled the scene before police arrived.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Abscond</div>
-                    <div class="pronunciation">/əbˈskɒnd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To escape from custody</div>
-                        <div class="bengali-meaning">হাজত বা হেফাজত থেকে পালানো</div>
-                    </div>
-                    <div class="example">The prisoner absconded last night.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Remand</div>
-                    <div class="pronunciation">/rɪˈmænd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To send a suspect back into custody</div>
-                        <div class="bengali-meaning">রিমান্ডে পাঠানো/হাজতে ফেরত পাঠানো</div>
-                    </div>
-                    <div class="example">The accused was placed on a 3-day remand.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Acquit / Clear</div>
-                    <div class="pronunciation">/əˈkwɪt, klɪr/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To declare someone not guilty</div>
-                        <div class="bengali-meaning">নির্দোষ ঘোষণা করা</div>
-                    </div>
-                    <div class="example">The court acquitted him of all charges.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Indict</div>
-                    <div class="pronunciation">/ɪnˈdaɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To formally accuse someone of a crime</div>
-                        <div class="bengali-meaning">আনুষ্ঠানিকভাবে অভিযুক্ত করা</div>
-                    </div>
-                    <div class="example">He was indicted on charges of fraud.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Grill</div>
-                    <div class="pronunciation">/ɡrɪl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To question intensely</div>
-                        <div class="bengali-meaning">কঠোরভাবে জেরা করা</div>
-                    </div>
-                    <div class="example">Detectives grilled the suspect for five hours.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Book</div>
-                    <div class="pronunciation">/bʊk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To register a case against someone</div>
-                        <div class="bengali-meaning">মামলা দায়ের করা</div>
-                    </div>
-                    <div class="example">He was booked for reckless driving.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Let off</div>
-                    <div class="pronunciation">/let ɒf/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To punish lightly or not at all</div>
-                        <div class="bengali-meaning">হালকা শাস্তি দেওয়া বা ছেড়ে দেওয়া</div>
-                    </div>
-                    <div class="example">He was let off with just a warning.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Crackdown</div>
-                    <div class="pronunciation">/ˈkrækdaʊn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A series of severe measures</div>
-                        <div class="bengali-meaning">কঠোর অভিযান/দমন</div>
-                    </div>
-                    <div class="example">The government has launched a crackdown on corruption.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">On the run</div>
-                    <div class="pronunciation">/ɒn ðə rʌn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Trying to avoid capture</div>
-                        <div class="bengali-meaning">পলাতক</div>
-                    </div>
-                    <div class="example">The escaped convict is still on the run.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Syndicate</div>
-                    <div class="pronunciation">/ˈsɪndɪkət/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A group involved in organized crime</div>
-                        <div class="bengali-meaning">অপরাধী চক্র</div>
-                    </div>
-                    <div class="example">Police busted a major drug syndicate.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Kingpin / Mastermind</div>
-                    <div class="pronunciation">/ˈkɪŋpɪn, ˈmæstərmaɪnd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The leader of a criminal group</div>
-                        <div class="bengali-meaning">চক্রের প্রধান হোতা</div>
-                    </div>
-                    <div class="example">He is believed to be the mastermind behind the robbery.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Moot</div>
-                    <div class="pronunciation">/muːt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A subject of debate; questionable</div>
-                        <div class="bengali-meaning">বিতর্কিত/বিবেচনার বিষয়</div>
-                    </div>
-                    <div class="example">Whether the law is effective is a moot point.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Verdict</div>
-                    <div class="pronunciation">/ˈvɜːrdɪkt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An official decision made in a court</div>
-                        <div class="bengali-meaning">আদালতের রায়</div>
-                    </div>
-                    <div class="example">The jury is expected to deliver its verdict today.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Plea</div>
-                    <div class="pronunciation">/pliː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A request made in a court</div>
-                        <div class="bengali-meaning">আদালতে আবেদন</div>
-                    </div>
-                    <div class="example">He made a plea for mercy.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Custody</div>
-                    <div class="pronunciation">/ˈkʌstədi/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Imprisonment or protective care</div>
-                        <div class="bengali-meaning">হেফাজত/হাজত</div>
-                    </div>
-                    <div class="example">The suspect is now in police custody.</div>
-                </div>
+                <div class="example">He lambasted the committee for its inaction.</div>
             </div>
-        </div>
-
-        <!-- Events, Impact & Reactions -->
-        <div class="section" id="events">
-            <div class="section-header">ঘটনা, প্রভাব ও প্রতিক্রিয়া (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Spark / Trigger</div>
-                    <div class="pronunciation">/spɑːrk, ˈtrɪɡər/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To cause something to start</div>
-                        <div class="bengali-meaning">উস্কে দেওয়া/শুরু করা</div>
-                    </div>
-                    <div class="example">The arrest of the leader sparked riots across the city.</div>
+            <div class="term-card">
+                <div class="term-name">Row</div>
+                <div class="pronunciation">/raʊ/ (রাউ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A serious argument</div>
+                    <div class="bengali-meaning">তীব্র বাদানুবাদ/ঝগড়া</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Fuel</div>
-                    <div class="pronunciation">/ˈfjuːəl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To make something worse</div>
-                        <div class="bengali-meaning">আরও খারাপ করা/উত্তেজনা বাড়ানো</div>
-                    </div>
-                    <div class="example">His comments only fueled the speculation.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Mar</div>
-                    <div class="pronunciation">/mɑːr/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To spoil or damage</div>
-                        <div class="bengali-meaning">নষ্ট করা/ক্ষতিগ্রস্ত করা</div>
-                    </div>
-                    <div class="example">The celebration was marred by violence.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Rock</div>
-                    <div class="pronunciation">/rɒk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To shock or upset greatly</div>
-                        <div class="bengali-meaning">নাড়িয়ে দেওয়া/আলোড়ন সৃষ্টি করা</div>
-                    </div>
-                    <div class="example">The country was rocked by a massive corruption scandal.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Hit</div>
-                    <div class="pronunciation">/hɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To be badly affected by something</div>
-                        <div class="bengali-meaning">মারাত্মকভাবে ক্ষতিগ্রস্ত হওয়া</div>
-                    </div>
-                    <div class="example">The coastal areas were hit by a severe cyclone.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Reel from</div>
-                    <div class="pronunciation">/riːl frɒm/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To struggle to deal with a shock</div>
-                        <div class="bengali-meaning">অভিঘাত সামলাতে হিমশিম খাওয়া</div>
-                    </div>
-                    <div class="example">The community is still reeling from the recent floods.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Grip</div>
-                    <div class="pronunciation">/ɡrɪp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To affect a place severely</div>
-                        <div class="bengali-meaning">গ্রাস করা/আঁকড়ে ধরা</div>
-                    </div>
-                    <div class="example">Fear has gripped the nation after the attacks.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Hail / Laud</div>
-                    <div class="pronunciation">/heɪl, lɔːd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To praise enthusiastically</div>
-                        <div class="bengali-meaning">প্রশংসা করা/জয়ধ্বনি করা</div>
-                    </div>
-                    <div class="example">The new policy was hailed as a major breakthrough.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Garner</div>
-                    <div class="pronunciation">/ˈɡɑːrnər/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To gather or collect</div>
-                        <div class="bengali-meaning">সংগ্রহ করা/অর্জন করা</div>
-                    </div>
-                    <div class="example">The film garnered several international awards.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Draw flak</div>
-                    <div class="pronunciation">/drɔː flæk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To attract criticism</div>
-                        <div class="bengali-meaning">সমালোচনার শিকার হওয়া</div>
-                    </div>
-                    <div class="example">The minister drew flak for his controversial remarks.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Backlash</div>
-                    <div class="pronunciation">/ˈbæklæʃ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A strong negative reaction</div>
-                        <div class="bengali-meaning">তীব্র নেতিবাচক প্রতিক্রিয়া</div>
-                    </div>
-                    <div class="example">There has been a public backlash against the new law.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Outcry</div>
-                    <div class="pronunciation">/ˈaʊtkraɪ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A strong expression of public disapproval</div>
-                        <div class="bengali-meaning">তীব্র গণ-প্রতিবাদ</div>
-                    </div>
-                    <div class="example">There was a public outcry over the injustice.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Uproar</div>
-                    <div class="pronunciation">/ˈʌprɔːr/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A loud and angry protest</div>
-                        <div class="bengali-meaning">হৈচৈ/গোলমাল</div>
-                    </div>
-                    <div class="example">The decision caused an uproar in parliament.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Flag</div>
-                    <div class="pronunciation">/flæɡ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To draw attention to something</div>
-                        <div class="bengali-meaning">দৃষ্টি আকর্ষণ করা/চিহ্নিত করা</div>
-                    </div>
-                    <div class="example">The report flagged several areas of concern.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Underscore</div>
-                    <div class="pronunciation">/ˌʌndərˈskɔːr/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To emphasize</div>
-                        <div class="bengali-meaning">গুরুত্ব আরোপ করা</div>
-                    </div>
-                    <div class="example">The incident underscores the need for better security.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Showcase</div>
-                    <div class="pronunciation">/ˈʃoʊkeɪs/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To exhibit or display</div>
-                        <div class="bengali-meaning">প্রদর্শন করা</div>
-                    </div>
-                    <div class="example">The event will showcase local talent.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Spotlight</div>
-                    <div class="pronunciation">/ˈspɒtlaɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To highlight or give attention to</div>
-                        <div class="bengali-meaning">মনোযোগের কেন্দ্রে আনা</div>
-                    </div>
-                    <div class="example">The documentary puts a spotlight on child labor.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Aftermath</div>
-                    <div class="pronunciation">/ˈæftərmæθ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The period after a disastrous event</div>
-                        <div class="bengali-meaning">কোনো ধ্বংসযজ্ঞের পরের অবস্থা</div>
-                    </div>
-                    <div class="example">In the aftermath of the earthquake, thousands were homeless.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Fallout</div>
-                    <div class="pronunciation">/ˈfɔːlaʊt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The negative results of an event</div>
-                        <div class="bengali-meaning">নেতিবাচক পরিণতি</div>
-                    </div>
-                    <div class="example">The political fallout from the scandal is still ongoing.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Onus</div>
-                    <div class="pronunciation">/ˈoʊnəs/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Responsibility or duty</div>
-                        <div class="bengali-meaning">দায়িত্ব</div>
-                    </div>
-                    <div class="example">The onus is on the government to prove its case.</div>
-                </div>
+                <div class="example">A major row has erupted over the selection process.</div>
             </div>
-        </div>
-
-        <!-- Rise, Fall & Change -->
-        <div class="section" id="rise">
-            <div class="section-header">উত্থান, পতন ও পরিবর্তন (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Soar / Surge</div>
-                    <div class="pronunciation">/sɔːr, sɜːrdʒ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To increase rapidly</div>
-                        <div class="bengali-meaning">দ্রুত বৃদ্ধি পাওয়া</div>
-                    </div>
-                    <div class="example">Prices of essential goods continue to soar.</div>
+            <div class="term-card">
+                <div class="term-name">Spat</div>
+                <div class="pronunciation">/spæt/ (স্প্যাট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A minor argument</div>
+                    <div class="bengali-meaning">ছোটখাটো ঝগড়া/তর্ক</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Plummet / Plunge</div>
-                    <div class="pronunciation">/ˈplʌmɪt, plʌndʒ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To fall suddenly and steeply</div>
-                        <div class="bengali-meaning">আকস্মিকভাবে পতন হওয়া</div>
-                    </div>
-                    <div class="example">His popularity has plummeted in recent months.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Tumble</div>
-                    <div class="pronunciation">/ˈtʌmbl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To fall suddenly</div>
-                        <div class="bengali-meaning">হুড়মুড়িয়ে পড়া</div>
-                    </div>
-                    <div class="example">The stock market tumbled after the news.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Nosedive</div>
-                    <div class="pronunciation">/ˈnoʊzdaɪv/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A sudden, steep fall</div>
-                        <div class="bengali-meaning">খাড়া পতন</div>
-                    </div>
-                    <div class="example">The company's profits took a nosedive last year.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Ramp up</div>
-                    <div class="pronunciation">/ræmp ʌp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To increase the level of something</div>
-                        <div class="bengali-meaning">কোনো কিছুর মাত্রা বাড়ানো</div>
-                    </div>
-                    <div class="example">The factory is ramping up production to meet demand.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Scale back</div>
-                    <div class="pronunciation">/skeɪl bæk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To reduce the size or extent of something</div>
-                        <div class="bengali-meaning">কোনো কিছুর পরিধি কমানো</div>
-                    </div>
-                    <div class="example">They had to scale back their ambitious plans.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Phase out</div>
-                    <div class="pronunciation">/feɪz aʊt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To gradually stop using something</div>
-                        <div class="bengali-meaning">পর্যায়ক্রমে বন্ধ করে দেওয়া</div>
-                    </div>
-                    <div class="example">The city plans to phase out diesel buses.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Overhaul</div>
-                    <div class="pronunciation">/ˌoʊvərˈhɔːl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A major renovation or reform</div>
-                        <div class="bengali-meaning">বড় ধরনের সংস্কার/আমূল পরিবর্তন</div>
-                    </div>
-                    <div class="example">The education system needs a complete overhaul.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Revamp</div>
-                    <div class="pronunciation">/ˈriːvæmp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To improve or renovate</div>
-                        <div class="bengali-meaning">ঢেলে সাজানো</div>
-                    </div>
-                    <div class="example">The company decided to revamp its brand image.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Transform</div>
-                    <div class="pronunciation">/trænsˈfɔːrm/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To change completely</div>
-                        <div class="bengali-meaning">সম্পূর্ণরূপে পরিবর্তন করা</div>
-                    </div>
-                    <div class="example">Digital technology has transformed the media industry.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Emerge</div>
-                    <div class="pronunciation">/ɪˈmɜːrdʒ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To appear or become known</div>
-                        <div class="bengali-meaning">আবির্ভূত হওয়া/আত্মপ্রকাশ করা</div>
-                    </div>
-                    <div class="example">A new leader has emerged from the crisis.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Gain traction</div>
-                    <div class="pronunciation">/ɡeɪn ˈtrækʃən/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To become popular or accepted</div>
-                        <div class="bengali-meaning">গ্রহণযোগ্যতা বা জনপ্রিয়তা পাওয়া</div>
-                    </div>
-                    <div class="example">The idea is slowly gaining traction among voters.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Wane</div>
-                    <div class="pronunciation">/weɪn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To become weaker or less important</div>
-                        <div class="bengali-meaning">হ্রাস পাওয়া/কমে যাওয়া</div>
-                    </div>
-                    <div class="example">Public interest in the issue has begun to wane.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Ebb</div>
-                    <div class="pronunciation">/eb/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To gradually lessen or reduce</div>
-                        <div class="bengali-meaning">ধীরে ধীরে কমে যাওয়া</div>
-                    </div>
-                    <div class="example">His influence began to ebb after the scandal.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Mushroom</div>
-                    <div class="pronunciation">/ˈmʌʃrʊm/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To grow or spread rapidly</div>
-                        <div class="bengali-meaning">ব্যাঙের ছাতার মতো গজিয়ে ওঠা</div>
-                    </div>
-                    <div class="example">Illegal coaching centers have mushroomed in the city.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Snowball</div>
-                    <div class="pronunciation">/ˈsnoʊbɔːl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To grow or increase rapidly</div>
-                        <div class="bengali-meaning">দ্রুতগতিতে বৃদ্ধি পাওয়া</div>
-                    </div>
-                    <div class="example">The small protest quickly snowballed into a national movement.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Witness</div>
-                    <div class="pronunciation">/ˈwɪtnəs/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To see something happen</div>
-                        <div class="bengali-meaning">প্রত্যক্ষ করা/সাক্ষী হওয়া</div>
-                    </div>
-                    <div class="example">The past decade has witnessed incredible technological growth.</div>
-                                </div>
-                <div class="term-card">
-                    <div class="term-name">Usher in</div>
-                    <div class="pronunciation">/ˈʌʃər ɪn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To mark the beginning of something new</div>
-                        <div class="bengali-meaning">নতুন কিছুর সূচনা করা</div>
-                    </div>
-                    <div class="example">The new year is expected to usher in an era of peace.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Pave the way</div>
-                    <div class="pronunciation">/peɪv ðə weɪ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To make something else possible</div>
-                        <div class="bengali-meaning">পথ প্রশস্ত করা</div>
-                    </div>
-                    <div class="example">This discovery will pave the way for new treatments.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Set the stage</div>
-                    <div class="pronunciation">/set ðə steɪdʒ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To prepare for an event to happen</div>
-                        <div class="bengali-meaning">ক্ষেত্র প্রস্তুত করা</div>
-                    </div>
-                    <div class="example">The preliminary talks set the stage for a formal summit.</div>
-                </div>
+                <div class="example">The two leaders had a brief spat during the debate.</div>
             </div>
-        </div>
-
-        <!-- Future Possibilities & Plans -->
-        <div class="section" id="future">
-            <div class="section-header">ভবিষ্যৎ সম্ভাবনা ও পরিকল্পনা (২০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Set to</div>
-                    <div class="pronunciation">/set tuː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Ready to or likely to</div>
-                        <div class="bengali-meaning">প্রস্তুত/করতে যাচ্ছে</div>
-                    </div>
-                    <div class="example">The PM is set to visit China next month.</div>
+            <div class="term-card">
+                <div class="term-name">Feud</div>
+                <div class="pronunciation">/fjuːd/ (ফিউড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A long, bitter quarrel</div>
+                    <div class="bengali-meaning">দীর্ঘদিনের বিবাদ</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Poised to</div>
-                    <div class="pronunciation">/pɔɪzd tuː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Ready to do something</div>
-                        <div class="bengali-meaning">কোনো কিছু করার জন্য প্রস্তুত</div>
-                    </div>
-                    <div class="example">The company is poised to launch its new product.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Likely to</div>
-                    <div class="pronunciation">/ˈlaɪkli tuː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Probably will</div>
-                        <div class="bengali-meaning">সম্ভাবনা আছে</div>
-                    </div>
-                    <div class="example">Interest rates are likely to rise again.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Bound to</div>
-                    <div class="pronunciation">/baʊnd tuː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Certain to happen</div>
-                        <div class="bengali-meaning">ঘটবেই/হতে বাধ্য</div>
-                    </div>
-                    <div class="example">With such poor planning, the project is bound to fail.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">On the cards</div>
-                    <div class="pronunciation">/ɒn ðə kɑːrdz/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Likely or possible</div>
-                        <div class="bengali-meaning">হওয়ার সম্ভাবনা আছে</div>
-                    </div>
-                    <div class="example">A cabinet reshuffle is on the cards.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">On the anvil</div>
-                    <div class="pronunciation">/ɒn ði ˈænvɪl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">In a state of discussion or planning</div>
-                        <div class="bengali-meaning">পরিকল্পনার অধীনে আছে</div>
-                    </div>
-                    <div class="example">A new law on data protection is on the anvil.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">In the pipeline</div>
-                    <div class="pronunciation">/ɪn ðə ˈpaɪplaɪn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Being planned or developed</div>
-                        <div class="bengali-meaning">প্রক্রিয়াধীন আছে</div>
-                    </div>
-                    <div class="example">Several new infrastructure projects are in the pipeline.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Loom</div>
-                    <div class="pronunciation">/luːm/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To appear as a large, unclear threat</div>
-                        <div class="bengali-meaning">আসন্ন বিপদ হিসেবে আবির্ভূত হওয়া</div>
-                    </div>
-                    <div class="example">The threat of a recession looms large.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Brewing</div>
-                    <div class="pronunciation">/ˈbruːɪŋ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Developing (usually something bad)</div>
-                        <div class="bengali-meaning">ঘনীভূত হচ্ছে (সাধারণত খারাপ কিছু)</div>
-                    </div>
-                    <div class="example">A political storm is brewing over the new bill.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Imminent</div>
-                    <div class="pronunciation">/ˈɪmɪnənt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">About to happen</div>
-                        <div class="bengali-meaning">আসন্ন/অবশ্যম্ভাবী</div>
-                    </div>
-                    <div class="example">A decision on the matter is imminent.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Forthcoming</div>
-                    <div class="pronunciation">/ˌfɔːrθˈkʌmɪŋ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Happening soon</div>
-                        <div class="bengali-meaning">আসন্ন</div>
-                    </div>
-                    <div class="example">Details will be released in the forthcoming weeks.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Envisage</div>
-                    <div class="pronunciation">/ɪnˈvɪzɪdʒ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To imagine or expect as a future possibility</div>
-                        <div class="bengali-meaning">পরিকল্পনা করা/ভবিষ্যতে কল্পনা করা</div>
-                    </div>
-                    <div class="example">The plan envisages a city free from pollution.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Gear up for</div>
-                    <div class="pronunciation">/ɡɪr ʌp fɔːr/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To prepare for something</div>
-                        <div class="bengali-meaning">কোনো কিছুর জন্য প্রস্তুত হওয়া</div>
-                    </div>
-                    <div class="example">The country is gearing up for the upcoming elections.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Brace for</div>
-                    <div class="pronunciation">/breɪs fɔːr/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To prepare for something difficult</div>
-                        <div class="bengali-meaning">কঠিন কিছুর জন্য প্রস্তুত হওয়া</div>
-                    </div>
-                    <div class="example">Coastal areas are bracing for the cyclone.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Roll out</div>
-                    <div class="pronunciation">/roʊl aʊt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To launch a new product or service</div>
-                        <div class="bengali-meaning">নতুন পণ্য বা সেবা চালু করা</div>
-                    </div>
-                    <div class="example">The new vaccine will be rolled out nationwide next month.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Chalk out</div>
-                    <div class="pronunciation">/tʃɔːk aʊt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To make a plan or sketch</div>
-                        <div class="bengali-meaning">পরিকল্পনা তৈরি করা</div>
-                    </div>
-                    <div class="example">The party is trying to chalk out its election strategy.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Draw up</div>
-                    <div class="pronunciation">/drɔː ʌp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To prepare a written document</div>
-                        <div class="bengali-meaning">খসড়া প্রস্তুত করা</div>
-                    </div>
-                    <div class="example">Lawyers were asked to draw up the contract.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Embark on</div>
-                    <div class="pronunciation">/ɪmˈbɑːrk ɒn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To start a new project or course of action</div>
-                        <div class="bengali-meaning">নতুন কিছু শুরু করা</div>
-                    </div>
-                    <div class="example">She is about to embark on a new career.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Kick off / Kick-start</div>
-                    <div class="pronunciation">/kɪk ɒf, ˈkɪk stɑːrt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">To begin</div>
-                        <div class="bengali-meaning">শুরু করা</div>
-                    </div>
-                    <div class="example">The campaign will kick off with a rally in Dhaka.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Go-ahead</div>
-                    <div class="pronunciation">/ˈɡoʊ əˌhed/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Permission to proceed</div>
-                        <div class="bengali-meaning">এগিয়ে যাওয়ার অনুমতি</div>
-                    </div>
-                    <div class="example">We are waiting for the go-ahead from the head office.</div>
-                </div>
+                <div class="example">The political feud between the two families is well-known.</div>
             </div>
-        </div>
-
-        <!-- Miscellaneous Important Words -->
-        <div class="section" id="miscellaneous">
-            <div class="section-header">বিবিধ গুরুত্বপূর্ণ শব্দ (৩০ শব্দ)</div>
-            <div class="term-grid">
-                <div class="term-card">
-                    <div class="term-name">Bid</div>
-                    <div class="pronunciation">/bɪd/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An attempt</div>
-                        <div class="bengali-meaning">প্রচেষ্টা</div>
-                    </div>
-                    <div class="example">He made a bid to win the party leadership.</div>
+            <div class="term-card">
+                <div class="term-name">Rift</div>
+                <div class="pronunciation">/rɪft/ (রিফট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A serious crack in a relationship</div>
+                    <div class="bengali-meaning">সম্পর্কচ্ছেদ/ফাটল</div>
                 </div>
-                <div class="term-card">
-                    <div class="term-name">Move</div>
-                    <div class="pronunciation">/muːv/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An action or step</div>
-                        <div class="bengali-meaning">পদক্ষেপ</div>
-                    </div>
-                    <div class="example">It was a strategic move to win public support.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Plea</div>
-                    <div class="pronunciation">/pliː/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An urgent and emotional request</div>
-                        <div class="bengali-meaning">আকুল আবেদন</div>
-                    </div>
-                    <div class="example">The family made a plea for their son's release.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Blow</div>
-                    <div class="pronunciation">/bloʊ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A setback or disappointment</div>
-                        <div class="bengali-meaning">ধাক্কা/আঘাত</div>
-                    </div>
-                    <div class="example">The court's decision was a major blow to the campaign.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Helm</div>
-                    <div class="pronunciation">/helm/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">In a position of leadership</div>
-                        <div class="bengali-meaning">নেতৃত্বে</div>
-                    </div>
-                    <div class="example">With a new CEO at the helm, the company's fortunes improved.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Mantle</div>
-                    <div class="pronunciation">/ˈmæntl/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">An important role or responsibility</div>
-                        <div class="bengali-meaning">গুরুদায়িত্ব</div>
-                    </div>
-                    <div class="example">He is ready to take on the mantle of leadership.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Aegis</div>
-                    <div class="pronunciation">/ˈiːdʒɪs/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">With the protection or support of</div>
-                        <div class="bengali-meaning">ছত্রছায়ায়/পৃষ্ঠপোষকতায়</div>
-                    </div>
-                    <div class="example">The event was held under the aegis of the Ministry of Culture.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Crux</div>
-                    <div class="pronunciation">/krʌks/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The most important point of an issue</div>
-                        <div class="bengali-meaning">মূল বিষয়/সবচেয়ে গুরুত্বপূর্ণ অংশ</div>
-                    </div>
-                    <div class="example">The crux of the matter is that we are running out of time.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Limelight</div>
-                    <div class="pronunciation">/ˈlaɪmlaɪt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The center of public attention</div>
-                        <div class="bengali-meaning">মনোযোগের কেন্দ্রবিন্দু</div>
-                    </div>
-                    <div class="example">The young actor is currently in the limelight.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Melee</div>
-                    <div class="pronunciation">/ˈmeɪleɪ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A confused fight involving many people</div>
-                        <div class="bengali-meaning">হট্টগোল/মারামারি</div>
-                    </div>
-                    <div class="example">Several people were injured in the melee.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Onus</div>
-                    <div class="pronunciation">/ˈoʊnəs/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Responsibility or duty</div>
-                        <div class="bengali-meaning">দায়িত্ব</div>
-                    </div>
-                    <div class="example">The onus is on the prosecution to prove guilt.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Prez</div>
-                    <div class="pronunciation">/prez/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Abbreviation for President</div>
-                        <div class="bengali-meaning">প্রেসিডেন্ট (সংক্ষেপ)</div>
-                    </div>
-                    <div class="example">The Prez will address the nation tonight.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Veep</div>
-                    <div class="pronunciation">/viːp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Abbreviation for Vice President</div>
-                        <div class="bengali-meaning">ভাইস প্রেসিডেন্ট (সংক্ষেপ)</div>
-                    </div>
-                    <div class="example">The Veep attended the ceremony.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Exchequer</div>
-                    <div class="pronunciation">/ɪksˈtʃekər/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The national treasury</div>
-                        <div class="bengali-meaning">রাষ্ট্রীয় কোষাগার</div>
-                    </div>
-                    <div class="example">The new tax is expected to add billions to the exchequer.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Diaspora</div>
-                    <div class="pronunciation">/daɪˈæspərə/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">People who have spread from their original homeland</div>
-                        <div class="bengali-meaning">প্রবাসী জনগোষ্ঠী</div>
-                    </div>
-                    <div class="example">The Bangladeshi diaspora in the UK is very active.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Mogul / Tycoon</div>
-                    <div class="pronunciation">/ˈmoʊɡəl, taɪˈkuːn/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A powerful and wealthy businessperson</div>
-                        <div class="bengali-meaning">শিল্পপতি/ব্যবসায়ী মহারথী</div>
-                    </div>
-                    <div class="example">He is a well-known real estate mogul.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Veteran</div>
-                    <div class="pronunciation">/ˈvetərən/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A person with long experience</div>
-                        <div class="bengali-meaning">অভিজ্ঞ ব্যক্তি/প্রবীণ</div>
-                    </div>
-                    <div class="example">The veteran politician announced his retirement.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Aspirant</div>
-                    <div class="pronunciation">/əˈspaɪrənt/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Someone who hopes to achieve a position</div>
-                        <div class="bengali-meaning">পদপ্রার্থী/আকাঙ্ক্ষী</div>
-                    </div>
-                    <div class="example">He is a presidential aspirant.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Scribe</div>
-                    <div class="pronunciation">/skraɪb/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A journalist</div>
-                        <div class="bengali-meaning">সাংবাদিক (সাধারণত পুরনো বা রসিক অর্থে)</div>
-                    </div>
-                    <div class="example">The political scribes were busy analyzing the speech.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Think-tank</div>
-                    <div class="pronunciation">/ˈθɪŋk tæŋk/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A group of experts providing advice and ideas</div>
-                        <div class="bengali-meaning">থিঙ্ক ট্যাঙ্ক/গবেষণা প্রতিষ্ঠান</div>
-                    </div>
-                    <div class="example">The report was published by a leading policy think-tank.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Ballot</div>
-                    <div class="pronunciation">/ˈbælət/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The process of voting</div>
-                        <div class="bengali-meaning">ভোট/নির্বাচন</div>
-                    </div>
-                    <div class="example">The country will go to the ballot next year.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Hustings</div>
-                    <div class="pronunciation">/ˈhʌstɪŋz/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The activities involved in an election campaign</div>
-                        <div class="bengali-meaning">নির্বাচনী প্রচার-প্রচারণা</div>
-                    </div>
-                    <div class="example">The candidates are on the hustings this week.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Manifesto</div>
-                    <div class="pronunciation">/ˌmænɪˈfestoʊ/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A written statement of beliefs and aims</div>
-                        <div class="bengali-meaning">ইশতেহার</div>
-                    </div>
-                    <div class="example">The party will release its election manifesto soon.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Grassroots</div>
-                    <div class="pronunciation">/ˈɡræsruːts/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">The ordinary people in a society or organization</div>
-                        <div class="bengali-meaning">তৃণমূল</div>
-                    </div>
-                    <div class="example">The movement has strong support at the grassroots level.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Hotbed</div>
-                    <div class="pronunciation">/ˈhɒtbed/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A place where a lot of a particular activity happens</div>
-                        <div class="bengali-meaning">কোনো কিছুর কেন্দ্রস্থল</div>
-                    </div>
-                    <div class="example">The region is a hotbed of political unrest.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Hot on the heels</div>
-                    <div class="pronunciation">/hɒt ɒn ðə hiːlz/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Following someone or something very closely</div>
-                        <div class="bengali-meaning">ঠিক পেছনেই/অনুসরণ করে</div>
-                    </div>
-                    <div class="example">The new report comes hot on the heels of last week's scandal.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">In the wake of</div>
-                    <div class="pronunciation">/ɪn ðə weɪk ɒv/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Following an event; as a result of it</div>
-                        <div class="bengali-meaning">কোনো ঘটনার ফলস্বরূপ</div>
-                    </div>
-                    <div class="example">Security was tightened in the wake of the attacks.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Red tape</div>
-                    <div class="pronunciation">/red teɪp/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">Excessive bureaucracy or official rules</div>
-                        <div class="bengali-meaning">লাল ফিতার দৌরাত্ম্য/আমলাতান্ত্রিক জটিলতা</div>
-                    </div>
-                    <div class="example">Investors are often frustrated by bureaucratic red tape.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Litmus test</div>
-                    <div class="pronunciation">/ˈlɪtməs test/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A test to make a judgment about something</div>
-                        <div class="bengali-meaning">অগ্নিপরীক্ষা/যাচাইয়ের মানদণ্ড</div>
-                    </div>
-                    <div class="example">The upcoming election will be a litmus test for the new leader.</div>
-                </div>
-                <div class="term-card">
-                    <div class="term-name">Watershed</div>
-                    <div class="pronunciation">/ˈwɔːtərʃed/</div>
-                    <div class="meaning">
-                        <div class="simple-meaning">A turning point; a critical moment</div>
-                        <div class="bengali-meaning">যুগান্তকারী মুহূর্ত/নির্ণায়ক সন্ধিক্ষণ</div>
-                    </div>
-                    <div class="example">The court's decision is being called a watershed moment for human rights.</div>
-                </div>
+                <div class="example">A rift has appeared within the ruling party.</div>
             </div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>© 2025 জার্নালিজ শব্দভান্ডার। সমস্ত তথ্য সাংবাদিকতার উদ্দেশ্যে সংকলিত।</p>
+            <div class="term-card">
+                <div class="term-name">Face-off</div>
+                <div class="pronunciation">/ˈfeɪs ɒf/ (ফেস-অফ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A direct confrontation</div>
+                    <div class="bengali-meaning">সরাসরি মোকাবিলা</div>
+                </div>
+                <div class="example">A diplomatic face-off is brewing between the two countries.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Standoff</div>
+                <div class="pronunciation">/ˈstændɒf/ (স্ট্যান্ডঅফ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A deadlock or stalemate</div>
+                    <div class="bengali-meaning">অচলবস্থা</div>
+                </div>
+                <div class="example">The border standoff continued for a third day.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Deadlock</div>
+                <div class="pronunciation">/ˈdedlɒk/ (ডেডলক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A situation where no progress can be made</div>
+                    <div class="bengali-meaning">অচলবস্থা/অচলাবস্থা</div>
+                </div>
+                <div class="example">Talks between the union and management have reached a deadlock.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Lock horns</div>
+                <div class="pronunciation">/lɒk hɔːrnz/ (লক হর্নজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To get into an argument</div>
+                    <div class="bengali-meaning">বিতর্কে জড়ানো</div>
+                </div>
+                <div class="example">The two giants of tech are set to lock horns in court.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Rebuff</div>
+                <div class="pronunciation">/rɪˈbʌf/ (রিবাফ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To reject bluntly</div>
+                    <div class="bengali-meaning">সরাসরি প্রত্যাখ্যান করা</div>
+                </div>
+                <div class="example">His plea for help was rebuffed.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Snub</div>
+                <div class="pronunciation">/snʌb/ (স্নাব)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To ignore or insult</div>
+                    <div class="bengali-meaning">উপেক্ষা বা অপমান করা</div>
+                </div>
+                <div class="example">The visiting diplomat snubbed the official ceremony.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Decry</div>
+                <div class="pronunciation">/dɪˈkraɪ/ (ডিক্রাই)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To publicly denounce</div>
+                    <div class="bengali-meaning">প্রকাশ্যে নিন্দা করা</div>
+                </div>
+                <div class="example">Activists decry the lack of environmental protection.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Gherao</div>
+                <div class="pronunciation">/ɡɪˈraʊ/ (ঘেরাও)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To surround a person or place as a protest</div>
+                    <div class="bengali-meaning">ঘেরাও করা</div>
+                </div>
+                <div class="example">Protesters decided to gherao the administrative building.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Boycott</div>
+                <div class="pronunciation">/ˈbɔɪkɒt/ (বয়কট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To refuse to participate in something as a protest</div>
+                    <div class="bengali-meaning">বর্জন করা</div>
+                </div>
+                <div class="example">The opposition party announced a boycott of the election.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Hassle</div>
+                <div class="pronunciation">/ˈhæsəl/ (হ্যাসেল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To annoy or bother persistently</div>
+                    <div class="bengali-meaning">হয়রানি করা</div>
+                </div>
+                <div class="example">Commuters face daily hassle on the city's roads.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Manhandle</div>
+                <div class="pronunciation">/ˈmænhændl/ (ম্যানহ্যান্ডেল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To handle roughly</div>
+                    <div class="bengali-meaning">শারীরিকভাবে হেনস্তা করা</div>
+                </div>
+                <div class="example">The journalist was allegedly manhandled by security.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Heckle</div>
+                <div class="pronunciation">/ˈhekəl/ (হেকেল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To interrupt a speaker with aggressive comments</div>
+                    <div class="bengali-meaning">বিদ্রূপ বা প্রশ্ন করে বাধা দেওয়া</div>
+                </div>
+                <div class="example">The minister was heckled during his speech.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Oust</div>
+                <div class="pronunciation">/aʊst/ (আউস্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To remove from power</div>
+                    <div class="bengali-meaning">ক্ষমতা থেকে অপসারণ করা</div>
+                </div>
+                <div class="example">The rebel faction attempted to oust the party leader.</div>
+            </div>
         </div>
     </div>
 
-    <!-- JavaScript for Search Functionality -->
-    <script>
-        function searchTerms() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('term-card');
+    <!-- Agreements, Discussions & Decisions -->
+    <div class="section" id="agreements">
+        <div class="section-header">চুক্তি, আলোচনা ও সিদ্ধান্ত (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Ink</div>
+                <div class="pronunciation">/ɪŋk/ (ইঙ্ক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To sign (a deal)</div>
+                    <div class="bengali-meaning">চুক্তি স্বাক্ষর করা</div>
+                </div>
+                <div class="example">Bangladesh inks a major trade deal with Vietnam.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Pact</div>
+                <div class="pronunciation">/pækt/ (প্যাক্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An agreement</div>
+                    <div class="bengali-meaning">চুক্তি/সন্ধি</div>
+                </div>
+                <div class="example">The two nations signed a historic peace pact.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Accord</div>
+                <div class="pronunciation">/əˈkɔːrd/ (অ্যাকর্ড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An official agreement</div>
+                    <div class="bengali-meaning">আনুষ্ঠানিক চুক্তি</div>
+                </div>
+                <div class="example">A peace accord was reached after weeks of negotiation.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Mull</div>
+                <div class="pronunciation">/mʌl/ (মাল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To consider</div>
+                    <div class="bengali-meaning">গভীরভাবে বিবেচনা করা</div>
+                </div>
+                <div class="example">The government mulls a new strategy to fight inflation.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Weigh</div>
+                <div class="pronunciation">/weɪ/ (ওয়ে)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To consider options</div>
+                    <div class="bengali-meaning">বিকল্প বিবেচনা করা</div>
+                </div>
+                <div class="example">The committee is weighing several proposals.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Vow</div>
+                <div class="pronunciation">/vaʊ/ (ভাউ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To promise solemnly</div>
+                    <div class="bengali-meaning">শপথ করা/প্রতিজ্ঞা করা</div>
+                </div>
+                <div class="example">The new mayor vowed to create a greener city.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Pledge</div>
+                <div class="pronunciation">/pledʒ/ (প্লেজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To promise formally</div>
+                    <div class="bengali-meaning">প্রতিশ্রুতি দেওয়া</div>
+                </div>
+                <div class="example">The company pledged $1 million to the relief fund.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Assert</div>
+                <div class="pronunciation">/əˈsɜːrt/ (অ্যাসার্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To state confidently</div>
+                    <div class="bengali-meaning">জোর দিয়ে বলা</div>
+                </div>
+                <div class="example">He asserted that the country's economy is on the right track.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Reiterate</div>
+                <div class="pronunciation">/riˈɪtəreɪt/ (রিইটারেট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To say again for emphasis</div>
+                    <div class="bengali-meaning">পুনরাবৃত্তি করা</div>
+                </div>
+                <div class="example">The Prime Minister reiterated her commitment to development.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Scrap</div>
+                <div class="pronunciation">/skræp/ (স্ক্র্যাপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To cancel</div>
+                    <div class="bengali-meaning">বাতিল করা</div>
+                </div>
+                <div class="example">The plan for a new highway has been scrapped.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Axe</div>
+                <div class="pronunciation">/æks/ (অ্যাক্স)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To cut or remove</div>
+                    <div class="bengali-meaning">ছেঁটে ফেলা/বাদ দেওয়া</div>
+                </div>
+                <div class="example">Several projects were axed due to budget cuts.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Shelve</div>
+                <div class="pronunciation">/ʃelv/ (শেলভ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To postpone a plan</div>
+                    <div class="bengali-meaning">পরিকল্পনা স্থগিত রাখা</div>
+                </div>
+                <div class="example">The proposal was shelved indefinitely.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Greenlight</div>
+                <div class="pronunciation">/ˈɡriːnlaɪt/ (গ্রিনলাইট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To give permission to proceed</div>
+                    <div class="bengali-meaning">সবুজ সংকেত দেওয়া</div>
+                </div>
+                <div class="example">The city corporation greenlighted the construction of the flyover.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Nod</div>
+                <div class="pronunciation">/nɒd/ (নড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Approval</div>
+                    <div class="bengali-meaning">অনুমোদন/সম্মতি</div>
+                </div>
+                <div class="example">The project finally got the nod from the ministry.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Consensus</div>
+                <div class="pronunciation">/kənˈsensəs/ (কনসেনসাস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">General agreement</div>
+                    <div class="bengali-meaning">সর্বসম্মতি/ঐকমত্য</div>
+                </div>
+                <div class="example">The committee reached a consensus on the issue.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Parley</div>
+                <div class="pronunciation">/ˈpɑːrli/ (পার্লি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A discussion between enemies/opponents</div>
+                    <div class="bengali-meaning">আলোচনা (শত্রুপক্ষের মধ্যে)</div>
+                </div>
+                <div class="example">The rival groups held a secret parley.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Huddle</div>
+                <div class="pronunciation">/ˈhʌdl/ (হাডল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To gather closely to discuss something</div>
+                    <div class="bengali-meaning">একত্রে জটলা করে আলোচনা করা</div>
+                </div>
+                <div class="example">The ministers went into a huddle before the press conference.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Broach</div>
+                <div class="pronunciation">/broʊtʃ/ (ব্রোচ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To bring up a sensitive topic for discussion</div>
+                    <div class="bengali-meaning">আলোচনার জন্য (কঠিন) বিষয় উত্থাপন করা</div>
+                </div>
+                <div class="example">He broached the subject of his resignation.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Slate</div>
+                <div class="pronunciation">/sleɪt/ (স্লেট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To schedule</div>
+                    <div class="bengali-meaning">সময়সূচী নির্ধারণ করা</div>
+                </div>
+                <div class="example">The meeting is slated for next Tuesday.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Earmark</div>
+                <div class="pronunciation">/ˈɪərmɑːrk/ (ইয়ারমার্ক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To set aside for a particular purpose</div>
+                    <div class="bengali-meaning">নির্দিষ্ট কাজের জন্য বরাদ্দ করা</div>
+                </div>
+                <div class="example">The funds were earmarked for rural development.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Economics, Business & Finance -->
+    <div class="section" id="economics">
+        <div class="section-header">অর্থনীতি, ব্যবসা ও অর্থ (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Hike</div>
+                <div class="pronunciation">/haɪk/ (হাইক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A sharp increase (in price/rate)</div>
+                    <div class="bengali-meaning">আকস্মিক বৃদ্ধি (দাম/হার)</div>
+                </div>
+                <div class="example">A massive fuel price hike has been announced.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Slash</div>
+                <div class="pronunciation">/slæʃ/ (স্ল্যাশ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To reduce sharply</div>
+                    <div class="bengali-meaning">резко কমানো</div>
+                </div>
+                <div class="example">The company decided to slash 500 jobs.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Dip</div>
+                <div class="pronunciation">/dɪp/ (ডিপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A slight, temporary fall</div>
+                    <div class="bengali-meaning">সামান্য পতন</div>
+                </div>
+                <div class="example">There was a slight dip in share prices this morning.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Curb</div>
+                <div class="pronunciation">/kɜːrb/ (কার্ব)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To control or limit</div>
+                    <div class="bengali-meaning">নিয়ন্ত্রণ বা দমন করা</div>
+                </div>
+                <div class="example">The central bank is trying to curb inflation.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Woo</div>
+                <div class="pronunciation">/wuː/ (উ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To try to attract</div>
+                    <div class="bengali-meaning">আকর্ষণ করার চেষ্টা করা</div>
+                </div>
+                <div class="example">The government is trying to woo foreign investors.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Bolster / Boost</div>
+                <div class="pronunciation">/ˈbəʊlstər, buːst/ (বোলস্টার, বুস্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To support or strengthen</div>
+                    <div class="bengali-meaning">শক্তিশালী করা/বৃদ্ধি করা</div>
+                </div>
+                <div class="example">The new credit line will bolster the country's foreign reserves.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Post</div>
+                <div class="pronunciation">/poʊst/ (পোস্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To announce or achieve (a profit/loss)</div>
+                    <div class="bengali-meaning">অর্জন করা (লাভ/লোকসান)</div>
+                </div>
+                <div class="example">The company posted record profits in the last quarter.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Rake in</div>
+                <div class="pronunciation">/reɪk ɪn/ (রেক ইন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To earn a lot of money easily</div>
+                    <div class="bengali-meaning">প্রচুর অর্থ উপার্জন করা</div>
+                </div>
+                <div class="example">The film raked in millions on its opening weekend.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Bailout</div>
+                <div class="pronunciation">/ˈbeɪlaʊt/ (বেলআউট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Financial rescue</div>
+                    <div class="bengali-meaning">আর্থিক সংকট থেকে উদ্ধার</div>
+                </div>
+                <div class="example">The government announced a bailout package for the struggling airline.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Austerity</div>
+                <div class="pronunciation">/ɔːˈsterəti/ (অস্টেরিটি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Measures to reduce government spending</div>
+                    <div class="bengali-meaning">ব্যয়সংকোচন নীতি</div>
+                </div>
+                <div class="example">The country is going through a period of austerity.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Fiscal</div>
+                <div class="pronunciation">/ˈfɪskəl/ (ফিসক্যাল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Related to government revenue/tax</div>
+                    <div class="bengali-meaning">রাজস্ব-সংক্রান্ত</div>
+                </div>
+                <div class="example">The fiscal year begins in July.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Monetary</div>
+                <div class="pronunciation">/ˈmɒnɪtəri/ (মনিটারি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Related to money supply/currency</div>
+                    <div class="bengali-meaning">মুদ্রা-সংক্রান্ত</div>
+                </div>
+                <div class="example">The central bank is responsible for monetary policy.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Bullish</div>
+                <div class="pronunciation">/ˈbʊlɪʃ/ (বুলিশ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Optimistic about the market</div>
+                    <div class="bengali-meaning">বাজার নিয়ে আশাবাদী</div>
+                </div>
+                <div class="example">Investors are bullish on the tech sector.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Bearish</div>
+                <div class="pronunciation">/ˈbeərɪʃ/ (বেয়ারিশ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Pessimistic about the market</div>
+                    <div class="bengali-meaning">বাজার নিয়ে হতাশাবাদী</div>
+                </div>
+                <div class="example">The market has a bearish outlook for the next quarter.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Lag</div>
+                <div class="pronunciation">/læɡ/ (ল্যাগ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To fall behind</div>
+                    <div class="bengali-meaning">পিছিয়ে পড়া</div>
+                </div>
+                <div class="example">The manufacturing sector continues to lag.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Glut</div>
+                <div class="pronunciation">/ɡlʌt/ (গ্লাট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An excessive supply</div>
+                    <div class="bengali-meaning">অতিরিক্ত সরবরাহ</div>
+                </div>
+                <div class="example">A glut of potatoes has caused prices to fall.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Levy</div>
+                <div class="pronunciation">/ˈlevi/ (লেভি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To impose a tax or fine</div>
+                    <div class="bengali-meaning">কর বা জরিমানা আরোপ করা</div>
+                </div>
+                <div class="example">A new tax was levied on imported cars.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Portfolio</div>
+                <div class="pronunciation">/pɔːrtˈfoʊlioʊ/ (পোর্টফোলিও)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A range of investments</div>
+                    <div class="bengali-meaning">বিনিয়োগের সম্ভার</div>
+                </div>
+                <div class="example">He has a diverse investment portfolio.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Ventures</div>
+                <div class="pronunciation">/ˈventʃərz/ (ভেনচারজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A risky business project</div>
+                    <div class="bengali-meaning">ঝুঁকিপূর্ণ ব্যবসায়িক উদ্যোগ</div>
+                </div>
+                <div class="example">He is known for his successful tech ventures.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Stake</div>
+                <div class="pronunciation">/steɪk/ (স্টেক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A share or interest in a business</div>
+                    <div class="bengali-meaning">অংশীদারিত্ব/অংশ</div>
+                </div>
+                <div class="example">The foreign company bought a 20% stake in the local bank.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Crime, Law & Investigation -->
+    <div class="section" id="crime">
+        <div class="section-header">অপরাধ, আইন ও তদন্ত (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Nab / Net</div>
+                <div class="pronunciation">/næb, net/ (ন্যাব, নেট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To catch or arrest</div>
+                    <div class="bengali-meaning">গ্রেপ্তার করা/জালে ফেলা</div>
+                </div>
+                <div class="example">Police nabbed the main suspect last night.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Foil</div>
+                <div class="pronunciation">/fɔɪl/ (ফয়েল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To prevent a crime from succeeding</div>
+                    <div class="bengali-meaning">ব্যর্থ করে দেওয়া</div>
+                </div>
+                <div class="example">Security forces foiled a major terror plot.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Raid</div>
+                <div class="pronunciation">/reɪd/ (রেইড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A surprise visit by police</div>
+                    <div class="bengali-meaning">আকস্মিক হানা/অভিযান</div>
+                </div>
+                <div class="example">The team conducted a raid on the illegal factory.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Haul</div>
+                <div class="pronunciation">/hɔːl/ (হল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A quantity of illegal goods seized</div>
+                    <div class="bengali-meaning">জব্দকৃত অবৈধ মালামাল</div>
+                </div>
+                <div class="example">The customs officials made a huge drug haul.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Flee</div>
+                <div class="pronunciation">/fliː/ (ফ্লি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To run away</div>
+                    <div class="bengali-meaning">পালিয়ে যাওয়া</div>
+                </div>
+                <div class="example">The suspect fled the scene before police arrived.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Abscond</div>
+                <div class="pronunciation">/əbˈskɒnd/ (অ্যাবসকন্ড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To escape from custody</div>
+                    <div class="bengali-meaning">হাজত বা হেফাজত থেকে পালানো</div>
+                </div>
+                <div class="example">The prisoner absconded last night.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Remand</div>
+                <div class="pronunciation">/rɪˈmænd/ (রিম্যান্ড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To send a suspect back into custody</div>
+                    <div class="bengali-meaning">রিমান্ডে পাঠানো/হাজতে ফেরত পাঠানো</div>
+                </div>
+                <div class="example">The accused was placed on a 3-day remand.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Acquit / Clear</div>
+                <div class="pronunciation">/əˈkwɪt, klɪr/ (অ্যাকুইট, ক্লিয়ার)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To declare someone not guilty</div>
+                    <div class="bengali-meaning">নির্দোষ ঘোষণা করা</div>
+                </div>
+                <div class="example">The court acquitted him of all charges.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Indict</div>
+                <div class="pronunciation">/ɪnˈdaɪt/ (ইন্ডাইট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To formally accuse someone of a crime</div>
+                    <div class="bengali-meaning">আনুষ্ঠানিকভাবে অভিযুক্ত করা</div>
+                </div>
+                <div class="example">He was indicted on charges of fraud.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Grill</div>
+                <div class="pronunciation">/ɡrɪl/ (গ্রিল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To question intensely</div>
+                    <div class="bengali-meaning">কঠোরভাবে জেরা করা</div>
+                </div>
+                <div class="example">Detectives grilled the suspect for five hours.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Book</div>
+                <div class="pronunciation">/bʊk/ (বুক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To register a case against someone</div>
+                    <div class="bengali-meaning">মামলা দায়ের করা</div>
+                </div>
+                <div class="example">He was booked for reckless driving.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Let off</div>
+                <div class="pronunciation">/let ɒf/ (লেট অফ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To punish lightly or not at all</div>
+                    <div class="bengali-meaning">হালকা শাস্তি দেওয়া বা ছেড়ে দেওয়া</div>
+                </div>
+                <div class="example">He was let off with just a warning.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Crackdown</div>
+                <div class="pronunciation">/ˈkrækdaʊn/ (ক্র্যাকডাউন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A series of severe measures</div>
+                    <div class="bengali-meaning">কঠোর অভিযান/দমন</div>
+                </div>
+                <div class="example">The government has launched a crackdown on corruption.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">On the run</div>
+                <div class="pronunciation">/ɒn ðə rʌn/ (অন দ্য রান)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Trying to avoid capture</div>
+                    <div class="bengali-meaning">পলাতক</div>
+                </div>
+                <div class="example">The escaped convict is still on the run.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Syndicate</div>
+                <div class="pronunciation">/ˈsɪndɪkət/ (সিন্ডিকেট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A group involved in organized crime</div>
+                    <div class="bengali-meaning">অপরাধী চক্র</div>
+                </div>
+                <div class="example">Police busted a major drug syndicate.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Kingpin / Mastermind</div>
+                <div class="pronunciation">/ˈkɪŋpɪn, ˈmæstərmaɪnd/ (কিংপিন, মাস্টারমাইন্ড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The leader of a criminal group</div>
+                    <div class="bengali-meaning">চক্রের প্রধান হোতা</div>
+                </div>
+                <div class="example">He is believed to be the mastermind behind the robbery.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Moot</div>
+                <div class="pronunciation">/muːt/ (মুট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A subject of debate; questionable</div>
+                    <div class="bengali-meaning">বিতর্কিত/বিবেচনার বিষয়</div>
+                </div>
+                <div class="example">Whether the law is effective is a moot point.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Verdict</div>
+                <div class="pronunciation">/ˈvɜːrdɪkt/ (ভার্ডিক্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An official decision made in a court</div>
+                    <div class="bengali-meaning">আদালতের রায়</div>
+                </div>
+                <div class="example">The jury is expected to deliver its verdict today.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Plea</div>
+                <div class="pronunciation">/pliː/ (প্লি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A request made in a court</div>
+                    <div class="bengali-meaning">আদালতে আবেদন</div>
+                </div>
+                <div class="example">He made a plea for mercy.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Custody</div>
+                <div class="pronunciation">/ˈkʌstədi/ (কাস্টোডি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Imprisonment or protective care</div>
+                    <div class="bengali-meaning">হেফাজত/হাজত</div>
+                </div>
+                <div class="example">The suspect is now in police custody.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events, Impact & Reactions -->
+    <div class="section" id="events">
+        <div class="section-header">ঘটনা, প্রভাব ও প্রতিক্রিয়া (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Spark / Trigger</div>
+                <div class="pronunciation">/spɑːrk, ˈtrɪɡər/ (স্পার্ক, ট্রিগার)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To cause something to start</div>
+                    <div class="bengali-meaning">উস্কে দেওয়া/শুরু করা</div>
+                </div>
+                <div class="example">The arrest of the leader sparked riots across the city.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Fuel</div>
+                <div class="pronunciation">/ˈfjuːəl/ (ফুয়েল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To make something worse</div>
+                    <div class="bengali-meaning">আরও খারাপ করা/উত্তেজনা বাড়ানো</div>
+                </div>
+                <div class="example">His comments only fueled the speculation.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Mar</div>
+                <div class="pronunciation">/mɑːr/ (মার)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To spoil or damage</div>
+                    <div class="bengali-meaning">নষ্ট করা/ক্ষতিগ্রস্ত করা</div>
+                </div>
+                <div class="example">The celebration was marred by violence.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Rock</div>
+                <div class="pronunciation">/rɒk/ (রক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To shock or upset greatly</div>
+                    <div class="bengali-meaning">নাড়িয়ে দেওয়া/আলোড়ন সৃষ্টি করা</div>
+                </div>
+                <div class="example">The country was rocked by a massive corruption scandal.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Hit</div>
+                <div class="pronunciation">/hɪt/ (হিট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To be badly affected by something</div>
+                    <div class="bengali-meaning">মারাত্মকভাবে ক্ষতিগ্রস্ত হওয়া</div>
+                </div>
+                <div class="example">The coastal areas were hit by a severe cyclone.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Reel from</div>
+                <div class="pronunciation">/riːl frɒm/ (রিল ফ্রম)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To struggle to deal with a shock</div>
+                    <div class="bengali-meaning">অভিঘাত সামলাতে হিমশিম খাওয়া</div>
+                </div>
+                <div class="example">The community is still reeling from the recent floods.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Grip</div>
+                <div class="pronunciation">/ɡrɪp/ (গ্রিপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To affect a place severely</div>
+                    <div class="bengali-meaning">গ্রাস করা/আঁকড়ে ধরা</div>
+                </div>
+                <div class="example">Fear has gripped the nation after the attacks.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Hail / Laud</div>
+                <div class="pronunciation">/heɪl, lɔːd/ (হেল, লড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To praise enthusiastically</div>
+                    <div class="bengali-meaning">প্রশংসা করা/জয়ধ্বনি করা</div>
+                </div>
+                <div class="example">The new policy was hailed as a major breakthrough.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Garner</div>
+                <div class="pronunciation">/ˈɡɑːrnər/ (গার্নার)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To gather or collect</div>
+                    <div class="bengali-meaning">সংগ্রহ করা/অর্জন করা</div>
+                </div>
+                <div class="example">The film garnered several international awards.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Draw flak</div>
+                <div class="pronunciation">/drɔː flæk/ (ড্র ফ্ল্যাক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To attract criticism</div>
+                    <div class="bengali-meaning">সমালোচনার শিকার হওয়া</div>
+                </div>
+                <div class="example">The minister drew flak for his controversial remarks.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Backlash</div>
+                <div class="pronunciation">/ˈbæklæʃ/ (ব্যাকল্যাশ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A strong negative reaction</div>
+                    <div class="bengali-meaning">তীব্র নেতিবাচক প্রতিক্রিয়া</div>
+                </div>
+                <div class="example">There has been a public backlash against the new law.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Outcry</div>
+                <div class="pronunciation">/ˈaʊtkraɪ/ (আউটক্রাই)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A strong expression of public disapproval</div>
+                    <div class="bengali-meaning">তীব্র গণ-প্রতিবাদ</div>
+                </div>
+                <div class="example">There was a public outcry over the injustice.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Uproar</div>
+                <div class="pronunciation">/ˈʌprɔːr/ (আপরোর)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A loud and angry protest</div>
+                    <div class="bengali-meaning">হৈচৈ/গোলমাল</div>
+                </div>
+                <div class="example">The decision caused an uproar in parliament.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Flag</div>
+                <div class="pronunciation">/flæɡ/ (ফ্ল্যাগ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To draw attention to something</div>
+                    <div class="bengali-meaning">দৃষ্টি আকর্ষণ করা/চিহ্নিত করা</div>
+                </div>
+                <div class="example">The report flagged several areas of concern.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Underscore</div>
+                <div class="pronunciation">/ˌʌndərˈskɔːr/ (আন্ডারস্কোর)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To emphasize</div>
+                    <div class="bengali-meaning">গুরুত্ব আরোপ করা</div>
+                </div>
+                <div class="example">The incident underscores the need for better security.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Showcase</div>
+                <div class="pronunciation">/ˈʃoʊkeɪs/ (শোকেস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To exhibit or display</div>
+                    <div class="bengali-meaning">প্রদর্শন করা</div>
+                </div>
+                <div class="example">The event will showcase local talent.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Spotlight</div>
+                <div class="pronunciation">/ˈspɒtlaɪt/ (স্পটলাইট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To highlight or give attention to</div>
+                    <div class="bengali-meaning">মনোযোগের কেন্দ্রে আনা</div>
+                </div>
+                <div class="example">The documentary puts a spotlight on child labor.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Aftermath</div>
+                <div class="pronunciation">/ˈæftərmæθ/ (আফটারম্যাথ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The period after a disastrous event</div>
+                    <div class="bengali-meaning">কোনো ধ্বংসযজ্ঞের পরের অবস্থা</div>
+                </div>
+                <div class="example">In the aftermath of the earthquake, thousands were homeless.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Fallout</div>
+                <div class="pronunciation">/ˈfɔːlaʊt/ (ফলআউট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The negative results of an event</div>
+                    <div class="bengali-meaning">নেতিবাচক পরিণতি</div>
+                </div>
+                <div class="example">The political fallout from the scandal is still ongoing.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Onus</div>
+                <div class="pronunciation">/ˈoʊnəs/ (ওনাস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Responsibility or duty</div>
+                    <div class="bengali-meaning">দায়িত্ব</div>
+                </div>
+                <div class="example">The onus is on the government to prove its case.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rise, Fall & Change -->
+    <div class="section" id="rise">
+        <div class="section-header">উত্থান, পতন ও পরিবর্তন (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Soar / Surge</div>
+                <div class="pronunciation">/sɔːr, sɜːrdʒ/ (সোর, সার্জ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To increase rapidly</div>
+                    <div class="bengali-meaning">দ্রুত বৃদ্ধি পাওয়া</div>
+                </div>
+                <div class="example">Prices of essential goods continue to soar.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Plummet / Plunge</div>
+                <div class="pronunciation">/ˈplʌmɪt, plʌndʒ/ (প্লামিট, প্লান্জ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To fall suddenly and steeply</div>
+                    <div class="bengali-meaning">আকস্মিকভাবে পতন হওয়া</div>
+                </div>
+                <div class="example">His popularity has plummeted in recent months.</div>
+            </div>
+            <div class="term-card">
+               <div class="term-name">Tumble</div>
+                <div class="pronunciation">/ˈtʌmbl/ (টাম্বল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To fall suddenly</div>
+                    <div class="bengali-meaning">হুড়মুড়িয়ে পড়া</div>
+                </div>
+                <div class="example">The stock market tumbled after the news.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Nosedive</div>
+                <div class="pronunciation">/ˈnoʊzdaɪv/ (নোজডাইভ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A sudden, steep fall</div>
+                    <div class="bengali-meaning">খাড়া পতন</div>
+                </div>
+                <div class="example">The company's profits took a nosedive last year.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Ramp up</div>
+                <div class="pronunciation">/ræmp ʌp/ (র্যাম্প আপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To increase the level of something</div>
+                    <div class="bengali-meaning">কোনো কিছুর মাত্রা বাড়ানো</div>
+                </div>
+                <div class="example">The factory is ramping up production to meet demand.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Scale back</div>
+                <div class="pronunciation">/skeɪl bæk/ (স্কেল ব্যাক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To reduce the size or extent of something</div>
+                    <div class="bengali-meaning">কোনো কিছুর পরিধি কমানো</div>
+                </div>
+                <div class="example">They had to scale back their ambitious plans.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Phase out</div>
+                <div class="pronunciation">/feɪz aʊt/ (ফেজ আউট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To gradually stop using something</div>
+                    <div class="bengali-meaning">পর্যায়ক্রমে বন্ধ করে দেওয়া</div>
+                </div>
+                <div class="example">The city plans to phase out diesel buses.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Overhaul</div>
+                <div class="pronunciation">/ˌoʊvərˈhɔːl/ (ওভারহল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A major renovation or reform</div>
+                    <div class="bengali-meaning">বড় ধরনের সংস্কার/আমূল পরিবর্তন</div>
+                </div>
+                <div class="example">The education system needs a complete overhaul.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Revamp</div>
+                <div class="pronunciation">/ˈriːvæmp/ (রিভ্যাম্প)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To improve or renovate</div>
+                    <div class="bengali-meaning">ঢেলে সাজানো</div>
+                </div>
+                <div class="example">The company decided to revamp its brand image.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Transform</div>
+                <div class="pronunciation">/trænsˈfɔːrm/ (ট্রান্সফর্ম)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To change completely</div>
+                    <div class="bengali-meaning">সম্পূর্ণরূপে পরিবর্তন করা</div>
+                </div>
+                <div class="example">Digital technology has transformed the media industry.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Emerge</div>
+                <div class="pronunciation">/ɪˈmɜːrdʒ/ (ইমার্জ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To appear or become known</div>
+                    <div class="bengali-meaning">আবির্ভূত হওয়া/আত্মপ্রকাশ করা</div>
+                </div>
+                <div class="example">A new leader has emerged from the crisis.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Gain traction</div>
+                <div class="pronunciation">/ɡeɪn ˈtrækʃən/ (গেইন ট্র্যাকশন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To become popular or accepted</div>
+                    <div class="bengali-meaning">গ্রহণযোগ্যতা বা জনপ্রিয়তা পাওয়া</div>
+                </div>
+                <div class="example">The idea is slowly gaining traction among voters.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Wane</div>
+                <div class="pronunciation">/weɪn/ (ওয়েন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To become weaker or less important</div>
+                    <div class="bengali-meaning">হ্রাস পাওয়া/কমে যাওয়া</div>
+                </div>
+                <div class="example">Public interest in the issue has begun to wane.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Ebb</div>
+                <div class="pronunciation">/eb/ (এব)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To gradually lessen or reduce</div>
+                    <div class="bengali-meaning">ধীরে ধীরে কমে যাওয়া</div>
+                </div>
+                <div class="example">His influence began to ebb after the scandal.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Mushroom</div>
+                <div class="pronunciation">/ˈmʌʃrʊm/ (মাশরুম)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To grow or spread rapidly</div>
+                    <div class="bengali-meaning">ব্যাঙের ছাতার মতো গজিয়ে ওঠা</div>
+                </div>
+                <div class="example">Illegal coaching centers have mushroomed in the city.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Snowball</div>
+                <div class="pronunciation">/ˈsnoʊbɔːl/ (স্নোবল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To grow or increase rapidly</div>
+                    <div class="bengali-meaning">দ্রুতগতিতে বৃদ্ধি পাওয়া</div>
+                </div>
+                <div class="example">The small protest quickly snowballed into a national movement.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Witness</div>
+                <div class="pronunciation">/ˈwɪtnəs/ (উইটনেস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To see something happen</div>
+                    <div class="bengali-meaning">প্রত্যক্ষ করা/সাক্ষী হওয়া</div>
+                </div>
+                <div class="example">The past decade has witnessed incredible technological growth.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Usher in</div>
+                <div class="pronunciation">/ˈʌʃər ɪn/ (আশার ইন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To mark the beginning of something new</div>
+                    <div class="bengali-meaning">নতুন কিছুর সূচনা করা</div>
+                </div>
+                <div class="example">The new year is expected to usher in an era of peace.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Pave the way</div>
+                <div class="pronunciation">/peɪv ðə weɪ/ (পেভ দ্য ওয়ে)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To make something else possible</div>
+                    <div class="bengali-meaning">পথ প্রশস্ত করা</div>
+                </div>
+                <div class="example">This discovery will pave the way for new treatments.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Set the stage</div>
+                <div class="pronunciation">/set ðə steɪdʒ/ (সেট দ্য স্টেজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To prepare for an event to happen</div>
+                    <div class="bengali-meaning">ক্ষেত্র প্রস্তুত করা</div>
+                </div>
+                <div class="example">The preliminary talks set the stage for a formal summit.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Future Possibilities & Plans -->
+    <div class="section" id="future">
+        <div class="section-header">ভবিষ্যৎ সম্ভাবনা ও পরিকল্পনা (২০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Set to</div>
+                <div class="pronunciation">/set tuː/ (সেট টু)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Ready to or likely to</div>
+                    <div class="bengali-meaning">প্রস্তুত/করতে যাচ্ছে</div>
+                </div>
+                <div class="example">The PM is set to visit China next month.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Poised to</div>
+                <div class="pronunciation">/pɔɪzd tuː/ (পয়জড টু)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Ready to do something</div>
+                    <div class="bengali-meaning">কোনো কিছু করার জন্য প্রস্তুত</div>
+                </div>
+                <div class="example">The company is poised to launch its new product.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Likely to</div>
+                <div class="pronunciation">/ˈlaɪkli tuː/ (লাইকলি টু)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Probably will</div>
+                    <div class="bengali-meaning">সম্ভাবনা আছে</div>
+                </div>
+                <div class="example">Interest rates are likely to rise again.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Bound to</div>
+                <div class="pronunciation">/baʊnd tuː/ (বাউন্ড টু)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Certain to happen</div>
+                    <div class="bengali-meaning">ঘটবেই/হতে বাধ্য</div>
+                </div>
+                <div class="example">With such poor planning, the project is bound to fail.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">On the cards</div>
+                <div class="pronunciation">/ɒn ðə kɑːrdz/ (অন দ্য কার্ডজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Likely or possible</div>
+                    <div class="bengali-meaning">হওয়ার সম্ভাবনা আছে</div>
+                </div>
+                <div class="example">A cabinet reshuffle is on the cards.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">On the anvil</div>
+                <div class="pronunciation">/ɒn ði ˈænvɪl/ (অন দি অ্যানভিল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">In a state of discussion or planning</div>
+                    <div class="bengali-meaning">পরিকল্পনার অধীনে আছে</div>
+                </div>
+                <div class="example">A new law on data protection is on the anvil.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">In the pipeline</div>
+                <div class="pronunciation">/ɪn ðə ˈpaɪplaɪn/ (ইন দ্য পাইপলাইন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Being planned or developed</div>
+                    <div class="bengali-meaning">প্রক্রিয়াধীন আছে</div>
+                </div>
+                <div class="example">Several new infrastructure projects are in the pipeline.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Loom</div>
+                <div class="pronunciation">/luːm/ (লুম)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To appear as a large, unclear threat</div>
+                    <div class="bengali-meaning">আসন্ন বিপদ হিসেবে আবির্ভূত হওয়া</div>
+                </div>
+                <div class="example">The threat of a recession looms large.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Brewing</div>
+                <div class="pronunciation">/ˈbruːɪŋ/ (ব্রুইং)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Developing (usually something bad)</div>
+                    <div class="bengali-meaning">ঘনীভূত হচ্ছে (সাধারণত খারাপ কিছু)</div>
+                </div>
+                <div class="example">A political storm is brewing over the new bill.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Imminent</div>
+                <div class="pronunciation">/ˈɪmɪnənt/ (ইমিনেন্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">About to happen</div>
+                    <div class="bengali-meaning">আসন্ন/অবশ্যম্ভাবী</div>
+                </div>
+                <div class="example">A decision on the matter is imminent.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Forthcoming</div>
+                <div class="pronunciation">/ˌfɔːrθˈkʌmɪŋ/ (ফর্থকামিং)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Happening soon</div>
+                    <div class="bengali-meaning">আসন্ন</div>
+                </div>
+                <div class="example">Details will be released in the forthcoming weeks.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Envisage</div>
+                <div class="pronunciation">/ɪnˈvɪzɪdʒ/ (এনভিজেজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To imagine or expect as a future possibility</div>
+                    <div class="bengali-meaning">পরিকল্পনা করা/ভবিষ্যতে কল্পনা করা</div>
+                </div>
+                <div class="example">The plan envisages a city free from pollution.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Gear up for</div>
+                <div class="pronunciation">/ɡɪr ʌp fɔːr/ (গিয়ার আপ ফর)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To prepare for something</div>
+                    <div class="bengali-meaning">কোনো কিছুর জন্য প্রস্তুত হওয়া</div>
+                </div>
+                <div class="example">The country is gearing up for the upcoming elections.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Brace for</div>
+                <div class="pronunciation">/breɪs fɔːr/ (ব্রেস ফর)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To prepare for something difficult</div>
+                    <div class="bengali-meaning">কঠিন কিছুর জন্য প্রস্তুত হওয়া</div>
+                </div>
+                <div class="example">Coastal areas are bracing for the cyclone.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Roll out</div>
+                <div class="pronunciation">/roʊl aʊt/ (রোল আউট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To launch a new product or service</div>
+                    <div class="bengali-meaning">নতুন পণ্য বা সেবা চালু করা</div>
+                </div>
+                <div class="example">The new vaccine will be rolled out nationwide next month.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Chalk out</div>
+                <div class="pronunciation">/tʃɔːk aʊt/ (চক আউট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To make a plan or sketch</div>
+                    <div class="bengali-meaning">পরিকল্পনা তৈরি করা</div>
+                </div>
+                <div class="example">The party is trying to chalk out its election strategy.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Draw up</div>
+                <div class="pronunciation">/drɔː ʌp/ (ড্র আপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To prepare a written document</div>
+                    <div class="bengali-meaning">খসড়া প্রস্তুত করা</div>
+                </div>
+                <div class="example">Lawyers were asked to draw up the contract.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Embark on</div>
+                <div class="pronunciation">/ɪmˈbɑːrk ɒn/ (এমবার্ক অন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To start a new project or course of action</div>
+                    <div class="bengali-meaning">নতুন কিছু শুরু করা</div>
+                </div>
+                <div class="example">She is about to embark on a new career.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Kick off / Kick-start</div>
+                <div class="pronunciation">/kɪk ɒf, ˈkɪk stɑːrt/ (কিক অফ, কিক-স্টার্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">To begin</div>
+                    <div class="bengali-meaning">শুরু করা</div>
+                </div>
+                <div class="example">The campaign will kick off with a rally in Dhaka.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Go-ahead</div>
+                <div class="pronunciation">/ˈɡoʊ əˌhed/ (গো-অ্যাহেড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Permission to proceed</div>
+                    <div class="bengali-meaning">এগিয়ে যাওয়ার অনুমতি</div>
+                </div>
+                <div class="example">We are waiting for the go-ahead from the head office.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Miscellaneous Important Words -->
+    <div class="section" id="miscellaneous">
+        <div class="section-header">বিবিধ গুরুত্বপূর্ণ শব্দ (৩০ শব্দ)</div>
+        <div class="term-grid">
+            <div class="term-card">
+                <div class="term-name">Bid</div>
+                <div class="pronunciation">/bɪd/ (বিড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An attempt</div>
+                    <div class="bengali-meaning">প্রচেষ্টা</div>
+                </div>
+                <div class="example">He made a bid to win the party leadership.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Move</div>
+                <div class="pronunciation">/muːv/ (মুভ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An action or step</div>
+                    <div class="bengali-meaning">পদক্ষেপ</div>
+                </div>
+                <div class="example">It was a strategic move to win public support.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Plea</div>
+                <div class="pronunciation">/pliː/ (প্লি)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An urgent and emotional request</div>
+                    <div class="bengali-meaning">আকুল আবেদন</div>
+                </div>
+                <div class="example">The family made a plea for their son's release.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Blow</div>
+                <div class="pronunciation">/bloʊ/ (ব্লো)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A setback or disappointment</div>
+                    <div class="bengali-meaning">ধাক্কা/আঘাত</div>
+                </div>
+                <div class="example">The court's decision was a major blow to the campaign.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Helm</div>
+                <div class="pronunciation">/helm/ (হেলম)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">In a position of leadership</div>
+                    <div class="bengali-meaning">নেতৃত্বে</div>
+                </div>
+                <div class="example">With a new CEO at the helm, the company's fortunes improved.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Mantle</div>
+                <div class="pronunciation">/ˈmæntl/ (ম্যান্টেল)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">An important role or responsibility</div>
+                    <div class="bengali-meaning">গুরুদায়িত্ব</div>
+                </div>
+                <div class="example">He is ready to take on the mantle of leadership.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Aegis</div>
+                <div class="pronunciation">/ˈiːdʒɪs/ (ইজিস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">With the protection or support of</div>
+                    <div class="bengali-meaning">ছত্রছায়ায়/পৃষ্ঠপোষকতায়</div>
+                </div>
+                <div class="example">The event was held under the aegis of the Ministry of Culture.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Crux</div>
+                <div class="pronunciation">/krʌks/ (ক্রাক্স)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The most important point of an issue</div>
+                    <div class="bengali-meaning">মূল বিষয়/সবচেয়ে গুরুত্বপূর্ণ অংশ</div>
+                </div>
+                <div class="example">The crux of the matter is that we are running out of time.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Limelight</div>
+                <div class="pronunciation">/ˈlaɪmlaɪt/ (লাইমলাইট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The center of public attention</div>
+                    <div class="bengali-meaning">মনোযোগের কেন্দ্রবিন্দু</div>
+                </div>
+                <div class="example">The young actor is currently in the limelight.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Melee</div>
+                <div class="pronunciation">/ˈmeɪleɪ/ (মেলে)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A confused fight involving many people</div>
+                    <div class="bengali-meaning">হট্টগোল/মারামারি</div>
+                </div>
+                <div class="example">Several people were injured in the melee.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Onus</div>
+                <div class="pronunciation">/ˈoʊnəs/ (ওনাস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Responsibility or duty</div>
+                    <div class="bengali-meaning">দায়িত্ব</div>
+                </div>
+                <div class="example">The onus is on the prosecution to prove guilt.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Prez</div>
+                <div class="pronunciation">/prez/ (প্রেজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Abbreviation for President</div>
+                    <div class="bengali-meaning">প্রেসিডেন্ট (সংক্ষেপ)</div>
+                </div>
+                <div class="example">The Prez will address the nation tonight.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Veep</div>
+                <div class="pronunciation">/viːp/ (ভিপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Abbreviation for Vice President</div>
+                    <div class="bengali-meaning">ভাইস প্রেসিডেন্ট (সংক্ষেপ)</div>
+                </div>
+                <div class="example">The Veep attended the ceremony.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Exchequer</div>
+                <div class="pronunciation">/ɪksˈtʃekər/ (এক্সচেকার)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The national treasury</div>
+                    <div class="bengali-meaning">রাষ্ট্রীয় কোষাগার</div>
+                </div>
+                <div class="example">The new tax is expected to add billions to the exchequer.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Diaspora</div>
+                <div class="pronunciation">/daɪˈæspərə/ (ডায়াসপোরা)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">People who have spread from their original homeland</div>
+                    <div class="bengali-meaning">প্রবাসী জনগোষ্ঠী</div>
+                </div>
+                <div class="example">The Bangladeshi diaspora in the UK is very active.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Mogul / Tycoon</div>
+                <div class="pronunciation">/ˈmoʊɡəl, taɪˈkuːn/ (মোগুল, টাইকুন)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A powerful and wealthy businessperson</div>
+                    <div class="bengali-meaning">শিল্পপতি/ব্যবসায়ী মহারথী</div>
+                </div>
+                <div class="example">He is a well-known real estate mogul.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Veteran</div>
+                <div class="pronunciation">/ˈvetərən/ (ভেটারান)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A person with long experience</div>
+                    <div class="bengali-meaning">অভিজ্ঞ ব্যক্তি/প্রবীণ</div>
+                </div>
+                <div class="example">The veteran politician announced his retirement.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Aspirant</div>
+                <div class="pronunciation">/əˈspaɪrənt/ (অ্যাসপায়রান্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Someone who hopes to achieve a position</div>
+                    <div class="bengali-meaning">পদপ্রার্থী/আকাঙ্ক্ষী</div>
+                </div>
+                <div class="example">He is a presidential aspirant.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Scribe</div>
+                <div class="pronunciation">/skraɪb/ (স্ক্রাইব)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A journalist</div>
+                    <div class="bengali-meaning">সাংবাদিক (সাধারণত পুরনো বা রসিক অর্থে)</div>
+                </div>
+                <div class="example">The political scribes were busy analyzing the speech.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Think-tank</div>
+                <div class="pronunciation">/ˈθɪŋk tæŋk/ (থিঙ্ক ট্যাঙ্ক)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A group of experts providing advice and ideas</div>
+                    <div class="bengali-meaning">থিঙ্ক ট্যাঙ্ক/গবেষণা প্রতিষ্ঠান</div>
+                </div>
+                <div class="example">The report was published by a leading policy think-tank.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Ballot</div>
+                <div class="pronunciation">/ˈbælət/ (ব্যালট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The process of voting</div>
+                    <div class="bengali-meaning">ভোট/নির্বাচন</div>
+                </div>
+                <div class="example">The country will go to the ballot next year.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Hustings</div>
+                <div class="pronunciation">/ˈhʌstɪŋz/ (হাস্টিংজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The activities involved in an election campaign</div>
+                    <div class="bengali-meaning">নির্বাচনী প্রচার-প্রচারণা</div>
+                </div>
+                <div class="example">The candidates are on the hustings this week.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Manifesto</div>
+                <div class="pronunciation">/ˌmænɪˈfestoʊ/ (ম্যানিফেস্টো)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A written statement of beliefs and aims</div>
+                    <div class="bengali-meaning">ইশতেহার</div>
+                </div>
+                <div class="example">The party will release its election manifesto soon.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Grassroots</div>
+                <div class="pronunciation">/ˈɡræsruːts/ (গ্রাসরুটস)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">The ordinary people in a society or organization</div>
+                    <div class="bengali-meaning">তৃণমূল</div>
+                </div>
+                <div class="example">The movement has strong support at the grassroots level.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Hotbed</div>
+                <div class="pronunciation">/ˈhɒtbed/ (হটবেড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A place where a lot of a particular activity happens</div>
+                    <div class="bengali-meaning">কোনো কিছুর কেন্দ্রস্থল</div>
+                </div>
+                <div class="example">The region is a hotbed of political unrest.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Hot on the heels</div>
+                <div class="pronunciation">/hɒt ɒn ðə hiːlz/ (হট অন দ্য হিলজ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Following someone or something very closely</div>
+                    <div class="bengali-meaning">ঠিক পেছনেই/অনুসরণ করে</div>
+                </div>
+                <div class="example">The new report comes hot on the heels of last week's scandal.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">In the wake of</div>
+                <div class="pronunciation">/ɪn ðə weɪk ɒv/ (ইন দ্য ওয়েক অফ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Following an event; as a result of it</div>
+                    <div class="bengali-meaning">কোনো ঘটনার ফলস্বরূপ</div>
+                </div>
+                <div class="example">Security was tightened in the wake of the attacks.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Red tape</div>
+                <div class="pronunciation">/red teɪp/ (রেড টেপ)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">Excessive bureaucracy or official rules</div>
+                    <div class="bengali-meaning">লাল ফিতার দৌরাত্ম্য/আমলাতান্ত্রিক জটিলতা</div>
+                </div>
+                <div class="example">Investors are often frustrated by bureaucratic red tape.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Litmus test</div>
+                <div class="pronunciation">/ˈlɪtməs test/ (লিটমাস টেস্ট)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A test to make a judgment about something</div>
+                    <div class="bengali-meaning">অগ্নিপরীক্ষা/যাচাইয়ের মানদণ্ড</div>
+                </div>
+                <div class="example">The upcoming election will be a litmus test for the new leader.</div>
+            </div>
+            <div class="term-card">
+                <div class="term-name">Watershed</div>
+                <div class="pronunciation">/ˈwɔːtərʃed/ (ওয়াটারশেড)</div>
+                <div class="meaning">
+                    <div class="simple-meaning">A turning point; a critical moment</div>
+                    <div class="bengali-meaning">যুগান্তকারী মুহূর্ত/নির্ণায়ক সন্ধিক্ষণ</div>
+                </div>
+                <div class="example">The court's decision is being called a watershed moment for human rights.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 জার্নালিজ শব্দভান্ডার। সমস্ত তথ্য সাংবাদিকতার উদ্দেশ্যে সংকলিত।</p>
+    </div>
+</div>
+
+<!-- JavaScript for Search Functionality -->
+<script>
+    function searchTerms() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('term-card');
+        
+        for (let i = 0; i < cards.length; i++) {
+            let term = cards[i].getElementsByClassName('term-name')[0].textContent.toLowerCase();
+            let simpleMeaning = cards[i].getElementsByClassName('simple-meaning')[0].textContent.toLowerCase();
+            let bengaliMeaning = cards[i].getElementsByClassName('bengali-meaning')[0].textContent.toLowerCase();
             
-            for (let i = 0; i < cards.length; i++) {
-                let term = cards[i].getElementsByClassName('term-name')[0].textContent.toLowerCase();
-                let simpleMeaning = cards[i].getElementsByClassName('simple-meaning')[0].textContent.toLowerCase();
-                let bengaliMeaning = cards[i].getElementsByClassName('bengali-meaning')[0].textContent.toLowerCase();
-                
-                if (term.includes(input) || simpleMeaning.includes(input) || bengaliMeaning.includes(input)) {
-                    cards[i].style.display = '';
-                } else {
-                    cards[i].style.display = 'none';
-                }
+            if (term.includes(input) || simpleMeaning.includes(input) || bengaliMeaning.includes(input)) {
+                cards[i].style.display = '';
+            } else {
+                cards[i].style.display = 'none';
             }
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
